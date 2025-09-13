@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<TITLE>Lattice TCL Log</TITLE>
+<TITLE></TITLE>
 <link href="file:///C:/lscc/radiant/2024.2/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="file:///C:/lscc/radiant/2024.2/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
 <style type="text/css">
@@ -40,23 +40,29 @@ if (a)
 <BODY>
 
 <DIV id="content" onclick="hideTocList()"><PRE>
-<A name="pn250912220534"></A><B><U><big>pn250912220534</big></U></B>
-#Start recording tcl command: 9/12/2025 21:53:40
-#Project Location: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek; Project name: lab3_ek
-prj_create -name "lab3_ek" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
-prj_save 
-prj_add_source "C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv"
-#Stop recording: 9/12/2025 22:05:34
-
+POSTSYN: Post Synthesis Process Radiant Software (64-bit) 2024.2.0.3.0
+Command Line: postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -w -o lab3_ek_impl_1_syn.udb -gui -msgset C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/promote.xml lab3_ek_impl_1.vm 
+   Architecture:     iCE40UP
+   Device:           iCE40UP5K
+   Package:          SG48
+   Performance:      High-Performance_1.2V
+Reading input file 'lab3_ek_impl_1.vm' ...
+Removing unused logic ...
+Starting design annotation....
+ 
+Constraint Summary:
+   Total number of constraints: 0
+   Total number of constraints dropped: 0
+ 
+Writing output file 'lab3_ek_impl_1_syn.udb'.
+POSTSYN finished successfully.
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 40 MB
+Checksum -- postsyn: f76c45579d22dc0c4ec5ca7a4d29349c8ef191c
 
 
 </PRE></DIV>
-
-<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
-<UL id="toc_list">
-<LI><A href=#pn250912220534>pn250912220534</A></LI>
-</UL>
-</DIV>
 
 <button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
 <script type="text/javascript">

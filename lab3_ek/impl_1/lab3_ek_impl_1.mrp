@@ -1,0 +1,208 @@
+
+                         Lattice Mapping Report File
+
+Design:  numberbank
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:  High-Performance_1.2V
+
+Mapper:    version Radiant Software (64-bit) 2024.2.0.3.0
+Mapped on: Sat Sep 13 16:28:33 2025
+
+Design Information
+------------------
+
+Command line:   map -i lab3_ek_impl_1_syn.udb -o lab3_ek_impl_1_map.udb -mp
+     lab3_ek_impl_1.mrp -hierrpt -gui -msgset
+     C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/promote.xml
+
+Design Summary
+--------------
+
+   Number of slice registers:   4 out of  5280 (<1%)
+   Number of I/O registers:      4 out of   117 (3%)
+   Number of LUT4s:            51 out of  5280 (1%)
+      Number of logic LUT4s:              51
+      Number of ripple logic:              0 (0 LUT4s)
+   Number of IO sites used:   18 out of 39 (46%)
+      Number of IO sites used for general PIO: 18
+      Number of IO sites used for I3C: 0 out of 2 (0%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for PIO+I3C: 18 out of 36 (50%)
+      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+      (note: If RGB LED drivers are not used, sites can be used as OD outputs,
+       see TN1288 iCE40 LED Driver Usage Guide)
+      Number of IO sites used for PIO+I3C+OD+RGB: 18 out of 39 (46%)
+   Number of DSPs:             0 out of 8 (0%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  0 out of 1 (0%)
+   Number of Low Speed OSCs:   0 out of 1 (0%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             0 out of 30 (0%)
+   Number of PLLs:             0 out of 1 (0%)
+   Number of Clocks:  1
+      Net clk_c: 8 loads, 8 rising, 0 falling (Driver: Port clk)
+   Number of Clock Enables:  1
+      Pin key_pressed: 4 loads, 0 SLICEs (Net: key_pressed_c)
+   Number of LSRs:  0
+   Top 10 highest fanout non-clock nets:
+      Net C_val_c_2: 17 loads
+      Net C_val_c_0: 14 loads
+      Net C_val_c_1: 14 loads
+      Net R_val_c_1: 14 loads
+      Net C_val_c_3: 13 loads
+      Net R_val_c_3: 13 loads
+      Net R_val_c_0: 12 loads
+      Net R_val_c_2: 11 loads
+
+                                    Page 1
+
+
+
+
+
+Design Summary (cont)
+---------------------
+      Net key_pressed_c: 8 loads
+      Net new_number_0__N_8: 4 loads
+
+
+
+
+
+   Number of warnings:  0
+   Number of criticals: 0
+   Number of errors:    0
+
+Design Errors/Criticals/Warnings
+--------------------------------
+
+   No error, critical, or warning presents.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+-------+-------+-----------+
+| IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
+|                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
++---------------------+-----------+-----------+-------+-------+-----------+
+| key_pressed         | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| C_val[0]            | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| C_val[1]            | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| C_val[2]            | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| C_val[3]            | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| R_val[0]            | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| R_val[1]            | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| R_val[2]            | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| R_val[3]            | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| clk                 | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| s2[0]               | OUTPUT    |           | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| s2[1]               | OUTPUT    |           | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| s2[2]               | OUTPUT    |           | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| s2[3]               | OUTPUT    |           | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| s1[0]               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| s1[1]               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| s1[2]               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| s1[3]               | OUTPUT    |           |       |       |           |
+
+                                    Page 2
+
+
+
+
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+-------+-------+-----------+
+
+Removed logic
+-------------
+
+Block i141 was optimized away.
+Block i556 was optimized away.
+
+ASIC Components
+---------------
+
+Instance Name: s2_i0_i3
+         Type: IOLOGIC
+Instance Name: s2_i0_i2
+         Type: IOLOGIC
+Instance Name: s2_i0_i1
+         Type: IOLOGIC
+Instance Name: s2_i0_i4
+         Type: IOLOGIC
+
+Constraint Summary
+------------------
+
+   Total number of constraints: 0
+   Total number of constraints dropped: 0
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs
+   Total REAL Time: 0 secs
+   Peak Memory Usage: 63 MB
+Checksum -- map: 4bd8a913e9f6f6292c3d9d3119c376ce19752d2c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 3
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995
+     AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent
+     Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems
+     All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor
+     Corporation,  All rights reserved.

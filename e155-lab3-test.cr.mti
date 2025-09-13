@@ -1,0 +1,36 @@
+C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_counter.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_counter.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module testbench_counter
+
+Top level modules:
+	testbench_counter
+
+} {} {}} C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/counter.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/counter.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}} C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_sevseg.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_sevseg.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module testbench_sevseg
+
+Top level modules:
+	testbench_sevseg
+
+} {} {}} C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/sevseg.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/sevseg.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module sevseg
+
+Top level modules:
+	sevseg
+
+} {} {}} C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/numberbank.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/numberbank.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module numberbank
+
+Top level modules:
+	numberbank
+
+} {} {}}

@@ -2,8 +2,29 @@
 <RadiantProject version="4.2" radiant="2024.2.0.3.0" title="lab3_ek" device="iCE40UP5K-SG48I" performance_grade="High-Performance_1.2V" family_int="ice40tp" device_int="itpa08" package_int="SG48" operation_int="IND" speed_int="6" default_implementation="impl_1">
     <Options/>
     <Implementation title="impl_1" dir="impl_1" description="impl_1" synthesis="lse" default_strategy="Strategy1">
-        <Options/>
+        <Options def_top="numberbank"/>
         <Source name="source/impl_1/lab3_ek.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog" top_module="top"/>
+        </Source>
+        <Source name="source/impl_1/sevseg.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
+        <Source name="source/impl_1/counter.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
+        <Source name="source/impl_1/scanner.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
+        <Source name="source/impl_1/numberbank.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog" top_module="numberbank"/>
+        </Source>
+        <Source name="source/impl_1/testbench_sevseg.sv" type="Verilog" type_short="Verilog" excluded="TRUE">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
+        <Source name="source/impl_1/testbench_counter.sv" type="Verilog" type_short="Verilog" excluded="TRUE">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
+        <Source name="source/impl_1/testbench_scanner.sv" type="Verilog" type_short="Verilog" excluded="TRUE">
             <Options VerilogStandard="System Verilog"/>
         </Source>
     </Implementation>
