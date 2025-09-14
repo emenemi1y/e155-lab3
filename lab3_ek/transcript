@@ -16,70 +16,13 @@
 # Loading project e155-lab3-test
 # Compile of counter.sv was successful.
 # Compile of lab3_ek.sv was successful with warnings.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv failed with 2 errors.
-# Compile of testbench_sevseg.sv was successful.
-# 8 compiles, 1 failed with 2 errors.
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful with warnings.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv failed with 1 errors.
-# Compile of testbench_sevseg.sv was successful.
-# 8 compiles, 1 failed with 1 error.
-# Compile of testbench_scanner.sv failed with 1 errors.
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful with warnings.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv failed with 1 errors.
-# Compile of testbench_sevseg.sv was successful.
-# 8 compiles, 1 failed with 1 error.
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful with warnings.
-# Compile of numberbank.sv was successful.
+# Compile of numberbank.sv failed with 1 errors.
 # Compile of scanner.sv was successful.
 # Compile of sevseg.sv was successful.
 # Compile of testbench_counter.sv was successful.
 # Compile of testbench_scanner.sv was successful.
 # Compile of testbench_sevseg.sv was successful.
-# 8 compiles, 0 failed with no errors.
-vsim -gui work.testbench_scanner -voptargs=+acc
-# vsim -gui work.testbench_scanner -voptargs="+acc" 
-# Start time: 20:43:08 on Sep 13,2025
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vopt-143) Recognized 1 FSM in module "scanner(fast)".
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_scanner(fast)
-# Loading work.scanner(fast)
-add wave -position insertpoint  \
-sim:/testbench_scanner/clk \
-sim:/testbench_scanner/reset \
-sim:/testbench_scanner/R \
-sim:/testbench_scanner/C \
-sim:/testbench_scanner/R_press \
-sim:/testbench_scanner/key_pressed \
-sim:/testbench_scanner/bounce_cycle_wait
-run 1000
-# Load canceled
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful with warnings.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv failed with 1 errors.
+# Compile of testbench_numberbank.sv was successful.
 # 9 compiles, 1 failed with 1 error.
 # Compile of counter.sv was successful.
 # Compile of lab3_ek.sv was successful with warnings.
@@ -91,12 +34,10 @@ run 1000
 # Compile of testbench_sevseg.sv was successful.
 # Compile of testbench_numberbank.sv was successful.
 # 9 compiles, 0 failed with no errors.
-vsim -gui -voptargs=+acc work.testbench_numberbank
-# End time: 21:04:54 on Sep 13,2025, Elapsed time: 0:21:46
-# Errors: 0, Warnings: 10
-# vsim -gui -voptargs="+acc" work.testbench_numberbank 
-# Start time: 21:04:54 on Sep 13,2025
-# ** Note: (vsim-3812) Design is being optimized...
+vsim -gui work.testbench_numberbank -voptargs=+acc
+# vsim -gui work.testbench_numberbank -voptargs="+acc" 
+# Start time: 12:50:28 on Sep 14,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
@@ -110,306 +51,9 @@ sim:/testbench_numberbank/key_pressed \
 sim:/testbench_numberbank/s1 \
 sim:/testbench_numberbank/s2
 run 1000
-# ** Error: test 1 output s1 =  , exp = 1000 (8)
-#    Time: 22 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 29
-# ** Error: test 2 output s1 =  , exp = 0110 (6)
-#    Time: 52 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 33
-# ** Error: test 2 output s2 =  , exp = 1000 (8)
-#    Time: 52 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 34
-# ** Error: test 3 output s1 =  , exp = 0110 (6)
-#    Time: 72 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 37
-# ** Error: test 3 output s2 =  , exp = 1000 (8)
-#    Time: 72 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 38
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 92 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 41
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 92 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 42
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 112 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 45
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 112 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 46
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.testbench_numberbank(fast)
-# Loading work.numberbank(fast)
-run 1000
-# ** Error: test 1 output s1 =  , exp = 1000 (8)
-#    Time: 22 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 29
-# ** Error: test 2 output s1 =  , exp = 0110 (6)
-#    Time: 52 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 33
-# ** Error: test 2 output s2 =  , exp = 1000 (8)
-#    Time: 52 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 34
-# ** Error: test 3 output s1 =  , exp = 0110 (6)
-#    Time: 72 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 37
-# ** Error: test 3 output s2 =  , exp = 1000 (8)
-#    Time: 72 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 38
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 92 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 41
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 92 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 42
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 112 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 45
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 112 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 46
-# Causality operation skipped due to absence of debug database file
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful with warnings.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# 9 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_numberbank(fast)
-# Loading work.numberbank(fast)
-run 1000
-# ** Error: test 1 output s1 =  , exp = 1000 (8)
-#    Time: 22 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 29
-# ** Error: test 2 output s1 =  , exp = 0110 (6)
-#    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 33
-# ** Error: test 2 output s2 =  , exp = 1000 (8)
+# ** Error: test 2 output s2 = 0110, exp = 1000 (8)
 #    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 34
-# ** Error: test 3 output s1 =  , exp = 0110 (6)
-#    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 37
-# ** Error: test 3 output s2 =  , exp = 1000 (8)
-#    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 38
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 41
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 42
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 45
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 46
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful with warnings.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# 9 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_numberbank(fast)
-# Loading work.numberbank(fast)
-run 1000
-# ** Error: test 1 output s1 =  , exp = 1000 (8), input = J
-#    Time: 22 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 29
-# ** Error: test 2 output s1 =  , exp = 0110 (6)
-#    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 33
-# ** Error: test 2 output s2 =  , exp = 1000 (8)
-#    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 34
-# ** Error: test 3 output s1 =  , exp = 0110 (6)
-#    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 37
-# ** Error: test 3 output s2 =  , exp = 1000 (8)
-#    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 38
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 41
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 42
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 45
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 46
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful with warnings.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# 9 compiles, 0 failed with no errors.
-restart-f
-# invalid command name "restart-f"
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_numberbank(fast)
-# Loading work.numberbank(fast)
-run 1000
-# ** Error: test 1 output s1 =  , exp = 1000 (8), input = J
-#    Time: 22 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 29
-# ** Error: test 2 output s1 =  , exp = 0110 (6), input = ¤
-#    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 33
-# ** Error: test 2 output s2 =  , exp = 1000 (8)
-#    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 34
-# ** Error: test 3 output s1 =  , exp = 0110 (6)
-#    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 37
-# ** Error: test 3 output s2 =  , exp = 1000 (8)
-#    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 38
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 41
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 42
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 45
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 46
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful with warnings.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# 9 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_numberbank(fast)
-# Loading work.numberbank(fast)
-run 1000
-# ** Error: test 1 output s1 =  , exp = 1000 (8), input = J
-#    Time: 22 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 29
-# ** Error: test 2 output s1 =  , exp = 0110 (6), input = ¤
-#    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 33
-# ** Error: test 2 output s2 =  , exp = 1000 (8)
-#    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 34
-# ** Error: test 3 output s1 =  , exp = 0110 (6)
-#    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 37
-# ** Error: test 3 output s2 =  , exp = 1000 (8)
-#    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 38
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 41
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 42
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 45
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 46
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful with warnings.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# 9 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_numberbank(fast)
-# Loading work.numberbank(fast)
-run 1000
-# ** Error: test 1 output s1 =  , exp = 1000 (8), input = ,
-#    Time: 22 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 29
-# ** Error: test 2 output s1 =  , exp = 0110 (6), input = 
-# , 
-#    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 33
-# ** Error: test 2 output s2 =  , exp = 1000 (8)
-#    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 34
-# ** Error: test 3 output s1 =  , exp = 0110 (6)
-#    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 37
-# ** Error: test 3 output s2 =  , exp = 1000 (8)
-#    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 38
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 41
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 42
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 45
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 46
-R_val
-# invalid command name "R_val"
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful with warnings.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# 9 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_numberbank(fast)
-# Loading work.numberbank(fast)
-run 1000
-# ** Error: test 1 output s1 = xxxx, exp = 1000 (8), input = 0100, 1010
-#    Time: 22 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 29
-# ** Error: test 2 output s1 =  , exp = 0110 (6), input = 
-# , 
-#    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 33
-# ** Error: test 2 output s2 =  , exp = 1000 (8)
-#    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 34
-# ** Error: test 3 output s1 =  , exp = 0110 (6)
-#    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 37
-# ** Error: test 3 output s2 =  , exp = 1000 (8)
-#    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 38
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 41
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 42
-# ** Error: test 4 output s1 = , exp = 1101 (13, D)
-#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 45
-# ** Error: test 4 output s2 = , exp = 0110 (6)
-#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 46
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful with warnings.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# 9 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_numberbank(fast)
-# Loading work.numberbank(fast)
-run 1000
-# ** Error: test 1 output s1 = xxxx, exp = 1000 (8), input = 0100, 1010
-#    Time: 22 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 29
-# ** Error: test 2 output s1 = xxxx, exp = 0110 (6), input = 1010, 0100
-#    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 33
-# ** Error: test 2 output s2 = xxxx, exp = 1000 (8)
-#    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 34
-# ** Error: test 3 output s1 = xxxx, exp = 0110 (6)
-#    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 37
-# ** Error: test 3 output s2 = xxxx, exp = 1000 (8)
+# ** Error: test 3 output s2 = 0110, exp = 1000 (8)
 #    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 38
 # ** Error: test 4 output s1 = 1110, exp = 1101 (13, D)
 #    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 41
@@ -420,7 +64,41 @@ run 1000
 # ** Error: test 4 output s2 = 1110, exp = 0110 (6)
 #    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 46
 # Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful with warnings.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv failed with 2 errors.
+# 9 compiles, 1 failed with 2 errors.
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "numberbank(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench_numberbank(fast)
+# Loading work.numberbank(fast)
+run 1000
+# ** Error: test 4 output s1 = 1110, exp = 1101 (13, D)
+#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 42
+# ** Error: test 4 output s1 = 1110, exp = 1101 (13, D)
+#    Time: 282 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 46
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
 # Compile of numberbank.sv was successful.
 # Compile of scanner.sv was successful.
 # Compile of sevseg.sv was successful.
@@ -438,23 +116,5 @@ restart -f
 # Loading work.testbench_numberbank(fast)
 # Loading work.numberbank(fast)
 run 1000
-# ** Error: test 1 output s1 = xxxx, exp = 1000 (8), input = 0100, 1010
-#    Time: 22 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 29
-# ** Error: test 2 output s1 = xxxx, exp = 0110 (6), input = 1010, 0100
-#    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 33
-# ** Error: test 2 output s2 = xxxx, exp = 1000 (8)
-#    Time: 62 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 34
-# ** Error: test 3 output s1 = xxxx, exp = 0110 (6)
-#    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 37
-# ** Error: test 3 output s2 = xxxx, exp = 1000 (8)
-#    Time: 192 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 38
-# ** Error: test 4 output s1 = 1110, exp = 1101 (13, D)
-#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 41
-# ** Error: test 4 output s2 = 1110, exp = 0110 (6)
-#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 42
-# ** Error: test 4 output s1 = 1110, exp = 1101 (13, D)
-#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 45
-# ** Error: test 4 output s2 = 1110, exp = 0110 (6)
-#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 46
-# End time: 21:36:12 on Sep 13,2025, Elapsed time: 0:31:18
-# Errors: 9, Warnings: 2
+# End time: 13:42:10 on Sep 14,2025, Elapsed time: 0:51:42
+# Errors: 0, Warnings: 2

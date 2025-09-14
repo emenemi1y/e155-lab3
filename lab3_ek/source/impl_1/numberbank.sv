@@ -7,14 +7,20 @@ when a number key is pressed.
 */
 
 module numberbank(
-	input logic clk, 
+	input logic clk, reset,
 	input logic [3:0] R_val, C_val,
 	input logic key_pressed,
 	output logic [3:0] s1, s2
 	);
 	
+	
+	// define states
+	typedef enum logic [1:0] {hold, update, stall} statetype;
+	statetype state, nextstate;
+	
+	
 	logic [3:0] new_number;
-	always_comb
+	always_comb begin
 		case ({R_val, C_val})
 			{4'b0001, 4'b0001}:   new_number = 4'b0001;
 			{4'b0001, 4'b0010}:   new_number = 4'b0010;
@@ -36,17 +42,36 @@ module numberbank(
 			{4'b1000, 4'b0100}:   new_number = 4'b1111;
 			{4'b1000, 4'b0100}:   new_number = 4'b1101;
 		endcase
-		
+	end
 	
-	always_ff @(posedge clk) begin
-		if (key_pressed) begin
-			s2 = s1;
-			s1 = new_number;
-		end
-		else begin
+	// update state 
+	always_ff @(posedge clk)
+	if (~reset) state <= hold;
+	else 	   state <= nextstate;
+		
+	// next state logic 
+	always_comb begin
+		case(state)
+			hold:	if (key_pressed) nextstate = update;
+					else             nextstate = hold;
+			update:                  nextstate = stall;
+			stall: 	if (key_pressed) nextstate = stall;
+					else             nextstate = hold;
+			
+			default:                 nextstate = hold;
+		endcase
+	end
+	
+	always_comb begin
+		if ((state == hold) || (state == stall)) begin
 			s2 = s2;
 			s1 = s1;
 		end
+		if (state == update) begin
+			s2 = s1;
+			s1 = new_number;
+		end
 	end
+			
 
 endmodule

@@ -1,5 +1,11 @@
 ----------------------------------------------------------------------
-Report for cell testbench_numberbank.TECH
-Register bits:  0 of 5280 (0.000%)
-I/O cells:      0
-                              TOTAL         0
+Report for cell numberbank.TECH
+Register bits:  3 of 5280 (0.057%)
+I/O cells:      19
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         3          100.0
+                                 IB        11          100.0
+                               LUT4        59          100.0
+                                 OB         8          100.0
+                              TOTAL        81

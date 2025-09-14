@@ -21,7 +21,7 @@ module top(input logic reset,
 		hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
 		
 	logic [23:0] BOUNCE_CYCLE_WAIT;
-	assign BOUNCE_CYCLE_WAIT = 7'd150000;
+	assign BOUNCE_CYCLE_WAIT = 23'd150000;
 		
 	logic [3:0] sync_R;
 		
@@ -41,7 +41,7 @@ module top(input logic reset,
 	counter counter1(clk, reset, SCANNER_CYCLES, clk_scan, SCANNER_F);
 	counter counter2(clk, reset, SEVSEG_CYCLES, sel);
 	
-	number_bank bank(key_press, R_press, C_val, s1, s2);
+	number_bank bank(clk, reset, key_press, R_press, C_val, s1, s2);
 	scanner scanner1(clk, sync_R, BOUNCE_CYCLE_WAIT, C, R_press, key_press);
 	
 	// apply power to correct seven-segement display

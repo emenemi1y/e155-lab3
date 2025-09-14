@@ -3,9 +3,7 @@ Report for cell numberbank
    Instance path: numberbank
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                 IOLGC	       4.00        100.0
-                                  LUT4	         51        100.0
-                               LUTGATE	         51        100.0
-                                 IOREG	          4        100.0
-                                 IOBUF	         18        100.0
-                                PFUREG	          4        100.0
+                                  LUT4	         59        100.0
+                               LUTGATE	         59        100.0
+                                 IOBUF	         19        100.0
+                                PFUREG	          3        100.0

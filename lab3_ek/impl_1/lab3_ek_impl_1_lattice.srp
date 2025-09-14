@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Sep 13 21:32:18 2025
+Sun Sep 14 13:19:22 2025
 
 
 Command Line:  C:\lscc\radiant\2024.2\ispfpga\bin\nt64\synthesis.exe -f C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/impl_1/lab3_ek_impl_1_lattice.synproj -logfile lab3_ek_impl_1_lattice.srp -gui -msgset C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/promote.xml 
@@ -51,7 +51,7 @@ Resolving user-selected strategy settings...
 ----------------------------------------------------------------
 Optimization Goal     | Area
 ----------------------------------------------------------------
-Top-level Module Name | testbench_numberbank
+Top-level Module Name | numberbank
 ----------------------------------------------------------------
 Target Frequency      | 200.000 MHz
 ----------------------------------------------------------------
@@ -118,7 +118,6 @@ Verilog design file: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/sourc
 Verilog design file: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/counter.sv
 Verilog design file: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/scanner.sv
 Verilog design file: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/numberbank.sv
-Verilog design file: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv
 VHDL library: pmi
 VHDL design file: C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.vhd
 WARNING <35935050> - synthesis: input port TRIM9 is not connected on this instance. VDB-5050
@@ -170,50 +169,157 @@ INFO <35901328> - synthesis: c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(16): an
 INFO <35901328> - synthesis: c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dq_be.v(45): analyzing included file c:/lscc/radiant/2024.2/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
 INFO <35901328> - synthesis: c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(17): analyzing included file c:/lscc/radiant/2024.2/ip/pmi/pmi_dsp.v. VERI-1328
 Analyzing Verilog file c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv. VERI-1482
-WARNING <35901208> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(24): literal value truncated to fit in 1935075200 bits. VERI-1208
 Analyzing Verilog file c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/sevseg.sv. VERI-1482
 Analyzing Verilog file c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/counter.sv. VERI-1482
 Analyzing Verilog file c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv. VERI-1482
 Analyzing Verilog file c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv. VERI-1482
-Analyzing Verilog file c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv. VERI-1482
 Analyzing VHDL file c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.vhd. VHDL-1481
 Analyzing VHDL file c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.vhd
 
 INFO <35921014> - synthesis: c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.vhd(4): analyzing package components. VHDL-1014
 INFO <35921504> - synthesis: The default VHDL library search path is now "C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/impl_1". VHDL-1504
 Top module language type = Verilog.
-Top module name (Verilog, mixed language): testbench_numberbank
-INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv(8): compiling module testbench_numberbank. VERI-1018
-WARNING <35901209> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv(28): expression size 7 truncated to fit in target size 4. VERI-1209
-WARNING <35901209> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv(32): expression size 7 truncated to fit in target size 4. VERI-1209
-WARNING <35901209> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv(36): expression size 10 truncated to fit in target size 4. VERI-1209
-WARNING <35901209> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv(40): expression size 10 truncated to fit in target size 4. VERI-1209
-WARNING <35901209> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv(44): expression size 7 truncated to fit in target size 4. VERI-1209
-WARNING <35901209> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv(44): expression size 10 truncated to fit in target size 4. VERI-1209
-WARNING <35901220> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv(48): using initial value of key_pressed since it is never assigned. VERI-1220
+Top module name (Verilog, mixed language): numberbank
 INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(9): compiling module numberbank. VERI-1018
-WARNING <35901899> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(38): behavior inside always_comb block does not represent combinational logic. VERI-1899
+WARNING <35901899> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(45): behavior inside always_comb block does not represent combinational logic. VERI-1899
+WARNING <35901899> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(74): behavior inside always_comb block does not represent combinational logic. VERI-1899
 [Parameter Setting Section Start]
 
 [Parameter Setting Section End]
-WARNING <35935047> - synthesis: Unused instance dut is removed. VDB-5047
+INFO <35001774> - synthesis: Extracted state machine for register 'state' with one-hot encoding
+State machine has 3 reachable states with original encodings of:
+
+ 00 
+
+ 01 
+
+ 10 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 00 -> 001
+
+ 01 -> 010
+
+ 10 -> 100
 
 
 
 
-################### Begin Area Report (testbench_numberbank)######################
-Number of register bits => 0 of 5280 (0 % )
+CRITICAL <35001747> - synthesis: Bit(s) of register state_FSM stuck at '0': 3
+Combinational loop due to latch found: 1
+
+	Instance new_number_2__I_0_2 
+
+	Net new_number[2] 
+
+Combinational loop due to latch found: 2
+
+	Instance s1_c_0_I_0 
+
+	Net s2_c_0 
+
+Combinational loop due to latch found: 3
+
+	Instance new_number_0__I_0 
+
+	Net s1_c_0 
+
+Combinational loop due to latch found: 4
+
+	Instance new_number_1__I_0_2 
+
+	Net new_number[1] 
+
+Combinational loop due to latch found: 5
+
+	Instance new_number_0__I_0_2 
+
+	Net new_number[0] 
+
+Combinational loop due to latch found: 6
+
+	Instance new_number_3__I_0_2 
+
+	Net new_number[3] 
+
+Combinational loop due to latch found: 7
+
+	Instance s1_c_1_I_0 
+
+	Net s2_c_1 
+
+Combinational loop due to latch found: 8
+
+	Instance s1_c_2_I_0 
+
+	Net s2_c_2 
+
+Combinational loop due to latch found: 9
+
+	Instance s1_c_3_I_0 
+
+	Net s2_c_3 
+
+Combinational loop due to latch found: 10
+
+	Instance new_number_1__I_0 
+
+	Net s1_c_1 
+
+Combinational loop due to latch found: 11
+
+	Instance new_number_2__I_0 
+
+	Net s1_c_2 
+
+Combinational loop due to latch found: 12
+
+	Instance new_number_3__I_0 
+
+	Net s1_c_3 
+
+CRITICAL <35001783> - synthesis: Mapping latch new_number_2__I_0_2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch s1_c_0_I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch new_number_0__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch new_number_1__I_0_2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch new_number_0__I_0_2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch new_number_3__I_0_2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch s1_c_1_I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch s1_c_2_I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch s1_c_3_I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch new_number_1__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch new_number_2__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch new_number_3__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+
+################### Begin Area Report (numberbank)######################
+Number of register bits => 3 of 5280 (0 % )
+FD1P3XZ => 3
+IB => 11
+LUT4 => 59
+OB => 8
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
 Number of even-length carry chains : 0
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 0
+Number of Clocks: 1
+  Net : clk_c, loads : 0
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
+  Net : C_val_c_2, loads : 18
+  Net : C_val_c_3, loads : 15
+  Net : C_val_c_1, loads : 15
+  Net : C_val_c_0, loads : 15
+  Net : R_val_c_3, loads : 14
+  Net : R_val_c_1, loads : 14
+  Net : R_val_c_0, loads : 12
+  Net : new_number_0__N_8, loads : 11
+  Net : R_val_c_2, loads : 10
+  Net : s2_c_0_N_16, loads : 9
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -222,10 +328,10 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 93 MB
+Peak Memory Usage: 94 MB
 
 --------------------------------------------------------------
 Total CPU Time: 5 secs 
 Total REAL Time: 8 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 7f7fbc60473814de49523f9bd4bc3462c88c964
+Checksum -- synthesis -- netlist: 848430cc8a30c52a95d0293de54c1b9885c7bb01

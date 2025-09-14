@@ -47,11 +47,10 @@
 "C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/counter.sv"
 "C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/scanner.sv"
 "C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/numberbank.sv"
-"C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv"
 
 
 -path "C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek"
--top testbench_numberbank
+-top numberbank
 -udb "lab3_ek_impl_1_rtl.udb"
 -output_hdl "lab3_ek_impl_1.vm"
 

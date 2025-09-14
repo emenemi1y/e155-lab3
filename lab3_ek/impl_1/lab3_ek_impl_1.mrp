@@ -8,7 +8,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.2.0.3.0
-Mapped on: Sat Sep 13 20:20:44 2025
+Mapped on: Sun Sep 14 13:19:35 2025
 
 Design Information
 ------------------
@@ -20,20 +20,20 @@ Command line:   map -i lab3_ek_impl_1_syn.udb -o lab3_ek_impl_1_map.udb -mp
 Design Summary
 --------------
 
-   Number of slice registers:   4 out of  5280 (<1%)
-   Number of I/O registers:      4 out of   117 (3%)
-   Number of LUT4s:            51 out of  5280 (1%)
-      Number of logic LUT4s:              51
+   Number of slice registers:   3 out of  5280 (<1%)
+   Number of I/O registers:      0 out of   117 (0%)
+   Number of LUT4s:            59 out of  5280 (1%)
+      Number of logic LUT4s:              59
       Number of ripple logic:              0 (0 LUT4s)
-   Number of IO sites used:   18 out of 39 (46%)
-      Number of IO sites used for general PIO: 18
+   Number of IO sites used:   19 out of 39 (49%)
+      Number of IO sites used for general PIO: 19
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 18 out of 36 (50%)
+      Number of IO sites used for PIO+I3C: 19 out of 36 (53%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 18 out of 39 (46%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 19 out of 39 (49%)
    Number of DSPs:             0 out of 8 (0%)
    Number of I2Cs:             0 out of 2 (0%)
    Number of High Speed OSCs:  0 out of 1 (0%)
@@ -47,19 +47,19 @@ Design Summary
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net clk_c: 8 loads, 8 rising, 0 falling (Driver: Port clk)
-   Number of Clock Enables:  1
-      Pin key_pressed: 4 loads, 0 SLICEs (Net: key_pressed_c)
-   Number of LSRs:  0
+      Net clk_c: 3 loads, 3 rising, 0 falling (Driver: Port clk)
+   Number of Clock Enables:  0
+   Number of LSRs:  1
+      Net n226: 3 loads, 3 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net C_val_c_2: 17 loads
-      Net C_val_c_0: 14 loads
-      Net C_val_c_1: 14 loads
+      Net C_val_c_2: 18 loads
+      Net C_val_c_0: 15 loads
+      Net C_val_c_1: 15 loads
+      Net C_val_c_3: 15 loads
       Net R_val_c_1: 14 loads
-      Net C_val_c_3: 13 loads
-      Net R_val_c_3: 13 loads
+      Net R_val_c_3: 14 loads
       Net R_val_c_0: 12 loads
-      Net R_val_c_2: 11 loads
+      Net R_val_c_2: 10 loads
 
                                     Page 1
 
@@ -69,7 +69,7 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net key_pressed_c: 8 loads
+      Net s2_c_0_N_16: 9 loads
       Net new_number_0__N_8: 4 loads
 
 
@@ -92,6 +92,8 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| s1[3]               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 | key_pressed         | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | C_val[0]            | INPUT     |           |       |       |           |
@@ -110,23 +112,21 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+-------+-------+-----------+
 | R_val[3]            | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| reset               | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 | clk                 | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| s2[0]               | OUTPUT    |           | O     |       |           |
+| s2[0]               | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| s2[1]               | OUTPUT    |           | O     |       |           |
+| s2[1]               | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| s2[2]               | OUTPUT    |           | O     |       |           |
+| s2[2]               | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| s2[3]               | OUTPUT    |           | O     |       |           |
+| s2[3]               | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | s1[0]               | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | s1[1]               | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| s1[2]               | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| s1[3]               | OUTPUT    |           |       |       |           |
 
                                     Page 2
 
@@ -137,24 +137,14 @@ IO (PIO) Attributes
 IO (PIO) Attributes (cont)
 --------------------------
 +---------------------+-----------+-----------+-------+-------+-----------+
+| s1[2]               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 
 Removed logic
 -------------
 
-Block i141 was optimized away.
-Block i556 was optimized away.
-
-ASIC Components
----------------
-
-Instance Name: s2_i0_i3
-         Type: IOLOGIC
-Instance Name: s2_i0_i2
-         Type: IOLOGIC
-Instance Name: s2_i0_i1
-         Type: IOLOGIC
-Instance Name: s2_i0_i4
-         Type: IOLOGIC
+Block key_pressed_pad.vlo_inst was optimized away.
+Block i2 was optimized away.
 
 Constraint Summary
 ------------------
@@ -167,8 +157,18 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 63 MB
-Checksum -- map: 4bd8a913e9f6f6292c3d9d3119c376ce19752d2c
+   Peak Memory Usage: 62 MB
+Checksum -- map: 29f1d465c295acf9ea87d382da652b3a7e74bc88
+
+
+
+
+
+
+
+
+
+
 
 
 
