@@ -456,3 +456,5 @@ run 1000
 #    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 45
 # ** Error: test 4 output s2 = 1110, exp = 0110 (6)
 #    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 46
+# End time: 21:36:12 on Sep 13,2025, Elapsed time: 0:31:18
+# Errors: 9, Warnings: 2
