@@ -10,7 +10,7 @@ column powered until released.
 module scanner (input logic clk, 
 				input logic reset,
 				input logic [3:0] R,
-				input logic [23:0] bounce_cycle_wait;
+				input logic [23:0] bounce_cycle_wait,
 				output logic [3:0] C,
 				output logic [3:0] R_press,
 				output logic key_press
@@ -37,7 +37,7 @@ module scanner (input logic clk,
 						nextstate = S4;
 						key_press = 1'b1;
 						R_press   = R; 
-						i <= 0; end
+						i = 0; end
 			S1: 	if (~|R) begin
 						nextstate = S2;
 						key_press = 1'b0; end
@@ -45,7 +45,7 @@ module scanner (input logic clk,
 						nextstate = S5;
 						key_press = 1'b1;
 						R_press   = R; 
-						i <= 0; end
+						i = 0; end
 			S2: 	if (~|R) begin
 						nextstate = S3;
 						key_press = 1'b0; end
@@ -53,7 +53,7 @@ module scanner (input logic clk,
 						nextstate = S6;
 						key_press = 1'b1;
 						R_press   = R; 
-						i <= 0; end
+						i = 0; end
 			S3:     if (~|R) begin
 						nextstate = S0;
 						key_press = 1'b0; end
@@ -61,7 +61,7 @@ module scanner (input logic clk,
 						nextstate = S7;
 						key_press = 1'b1;
 						R_press   = R; 
-						i <= 0; end
+						i = 0; end
 						
 			S4: 	if (i < bounce_cycle_wait) begin 
 						nextstate = S4;
@@ -93,7 +93,7 @@ module scanner (input logic clk,
 							nextstate = S3;
 							key_press = 1'b0; end
 						else nextstate = S6; 
-					emd
+					end
 			S7: 	if (i < bounce_cycle_wait) begin
 						nextstate = S7;
 						i = i + 1;

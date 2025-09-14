@@ -2,7 +2,7 @@
 Starting: parse design source files
 (VERI-1482) Analyzing Verilog file 'C:/lscc/radiant/2024.2/cae_library/synthesis/verilog/iCE40UP.v'
 (VERI-1482) Analyzing Verilog file 'C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv'
-WARNING <2043208> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(24,29-24,39) (VERI-1208) literal value 'd2400000 truncated to fit in 7 bits
+WARNING <2043208> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(24,29-24,38) (VERI-1208) literal value 'd150000 truncated to fit in 7 bits
 INFO <2044561> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(40,22-40,23) (VERI-2561) undeclared symbol 's', assumed default net type 'wire'
 INFO <2044561> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(41,47-41,55) (VERI-2561) undeclared symbol 'clk_scan', assumed default net type 'wire'
 INFO <2044561> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(41,57-41,66) (VERI-2561) undeclared symbol 'SCANNER_F', assumed default net type 'wire'
@@ -14,9 +14,8 @@ INFO <2044561> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/im
 (VERI-1482) Analyzing Verilog file 'C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/sevseg.sv'
 (VERI-1482) Analyzing Verilog file 'C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/counter.sv'
 (VERI-1482) Analyzing Verilog file 'C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/scanner.sv'
-ERROR <2043137> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/scanner.sv(13,41-13,42) (VERI-1137) syntax error near ';'
-(VERI-1483) Verilog file 'C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/scanner.sv' ignored due to errors
 (VERI-1482) Analyzing Verilog file 'C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/numberbank.sv'
+(VERI-1482) Analyzing Verilog file 'C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv'
 (VERI-1482) Analyzing Verilog file 'C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v'
 INFO <2043328> - C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v(1,10-1,24) (VERI-1328) analyzing included file 'C:/lscc/radiant/2024.2/ip/pmi/pmi_addsub.v'
 INFO <2043328> - C:/lscc/radiant/2024.2/ip/pmi/pmi_addsub.v(40,10-40,57) (VERI-1328) analyzing included file 'C:/lscc/radiant/2024.2/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v'
@@ -86,10 +85,15 @@ INFO <2043328> - C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v(17,10-17,21) (VERI-
 INFO <2044320> - C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v(17,10-17,21) (VERI-2320) back to file 'C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v'
 INFO <2043018> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(9,8-9,11) (VERI-1018) compiling module 'top'
 WARNING <2043063> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(44,2-44,54) (VERI-1063) instantiating unknown module 'number_bank'
-WARNING <2043063> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(45,2-45,74) (VERI-1063) instantiating unknown module 'scanner'
 WARNING <2043330> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(40,22-40,23) (VERI-1330) actual bit length 1 differs from formal bit length 4 for port 's'
+WARNING <2043330> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(45,24-45,30) (VERI-1330) actual bit length 4 differs from formal bit length 1 for port 'reset'
+WARNING <2043330> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(45,32-45,49) (VERI-1330) actual bit length 24 differs from formal bit length 4 for port 'R'
+WARNING <2043330> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(45,51-45,52) (VERI-1330) actual bit length 4 differs from formal bit length 24 for port 'bounce_cycle_wait'
+WARNING <2043330> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(45,54-45,61) (VERI-1330) actual bit length 1 differs from formal bit length 4 for port 'C'
+WARNING <2043330> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(45,63-45,72) (VERI-1330) actual bit length 1 differs from formal bit length 4 for port 'R_press'
 ERROR <2043182> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(41,2-41,68) (VERI-1182) 'counter' requires 4 arguments
-INFO <2043018> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(9,8-9,18) (VERI-1018) compiling module 'numberbank'
-Done: design load finished with (2) errors, and (4) warnings
+WARNING <2043927> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(45,2-45,74) (VERI-1927) port 'key_press' remains unconnected for this instance
+INFO <2043018> - C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv(8,8-8,28) (VERI-1018) compiling module 'testbench_numberbank'
+Done: design load finished with (1) errors, and (9) warnings
 
 </PRE></BODY></HTML>

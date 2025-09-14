@@ -21,7 +21,7 @@ module top(input logic reset,
 		hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
 		
 	logic [23:0] BOUNCE_CYCLE_WAIT;
-	assign BOUNCE_CYCLE_WAIT = 7'd2400000;
+	assign BOUNCE_CYCLE_WAIT = 7'd150000;
 		
 	logic [3:0] sync_R;
 		
@@ -32,7 +32,7 @@ module top(input logic reset,
 	
 	// number of cycles for seven segment display and scanner
 	logic [23:0] SCANNER_CYCLES;
-	assign SCANNER_CYCLES = 24'd2;
+	assign SCANNER_CYCLES = 24'd15;
 	logic [23:0] SEVSEG_CYCLES;
 	assign SEVSEG_CYCLES = 24'd10000;
 	

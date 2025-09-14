@@ -5,12 +5,12 @@ Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
 Top level modules:
 	testbench_counter
 
-} {} {}} C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/counter.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/counter.sv
+} {} {}} C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv
 Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
--- Compiling module counter
+-- Compiling module testbench_numberbank
 
 Top level modules:
-	counter
+	testbench_numberbank
 
 } {} {}} C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_sevseg.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_sevseg.sv
 Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
@@ -19,6 +19,20 @@ Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
 Top level modules:
 	testbench_sevseg
 
+} {} {}} C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/counter.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/counter.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}} C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module testbench_scanner
+
+Top level modules:
+	testbench_scanner
+
 } {} {}} C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/sevseg.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/sevseg.sv
 Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
 -- Compiling module sevseg
@@ -26,11 +40,19 @@ Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
 Top level modules:
 	sevseg
 
-} {} {}} C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/numberbank.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/numberbank.sv
+} {} {}} C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv {2 {vlog -work work -vopt -sv -stats=none C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv
 Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
--- Compiling module numberbank
+-- Compiling module top
+** Warning: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(24): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 
 Top level modules:
-	numberbank
+	top
+
+} {} {}} C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/scanner.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/scanner.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module scanner
+
+Top level modules:
+	scanner
 
 } {} {}}

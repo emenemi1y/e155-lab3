@@ -1,6 +1,6 @@
 
 PAR: Place And Route Radiant Software (64-bit) 2024.2.0.3.0.
-PARed on: Sat Sep 13 16:28:38 2025
+PARed on: Sat Sep 13 20:20:49 2025
 
 Command Line: par -w -t 1 -cores 1 -hsp m -exp parPathBased=ON \
 	lab3_ek_impl_1_map.udb lab3_ek_impl_1_par.dir/5_1.udb 
@@ -67,13 +67,13 @@ Placer score = 8826.
 Device SLICE utilization summary after final SLICE packing:
    SLICE             27/2640          1% used
 
-Finished Placer Phase 1. CPU time: 7 secs , REAL time: 7 secs 
+Finished Placer Phase 1. CPU time: 7 secs , REAL time: 8 secs 
 
 Starting Placer Phase 2.
 .
 
 Placer score =  18773
-Finished Placer Phase 2.  CPU time: 7 secs , REAL time: 7 secs 
+Finished Placer Phase 2.  CPU time: 7 secs , REAL time: 8 secs 
 
 
 ------------------ Clock Report ------------------
@@ -100,7 +100,7 @@ I/O Bank Usage Summary:
 | 2        | 8 / 8 (100%)   | 3.3V       |            |            |
 +----------+----------------+------------+------------+------------+
 
-Total Placer CPU time: 7 secs , REAL time: 7 secs 
+Total Placer CPU time: 7 secs , REAL time: 8 secs 
 
 
 Checksum -- place: 8150b1aa3c0059229ffaba5fdeb7f10d42fdb69e
@@ -112,7 +112,7 @@ INFO - par: ASE feature is off due to non timing-driven settings.
 -----------------------------------------------------------------
 
 
-Start NBR router at 16:28:45 09/13/25
+Start NBR router at 20:20:57 09/13/25
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -140,7 +140,7 @@ Other clocks:
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
 
-Start NBR section for initial routing at 16:28:46 09/13/25
+Start NBR section for initial routing at 20:20:57 09/13/25
 Level 4, iteration 1
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Routing in Serial Mode ......
@@ -150,7 +150,7 @@ Routing in Serial Mode ......
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 16:28:46 09/13/25
+Start NBR section for normal routing at 20:20:58 09/13/25
 Level 4, iteration 1
 2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
 Level 4, iteration 2
@@ -162,7 +162,7 @@ Level 4, iteration 4
 Level 4, iteration 5
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
 
-Start NBR section for post-routing at 16:28:46 09/13/25
+Start NBR section for post-routing at 20:20:58 09/13/25
 
 End NBR router with 0 unrouted connection(s)
 
@@ -189,9 +189,9 @@ PAR_SUMMARY::Number of errors = 0
 
 Note: user must run 'timing' for timing closure signoff.
 
-Total CPU  Time: 7 secs 
-Total REAL Time: 8 secs 
-Peak Memory Usage: 107.41 MB
+Total CPU  Time: 8 secs 
+Total REAL Time: 9 secs 
+Peak Memory Usage: 107.61 MB
 
 
 par done!

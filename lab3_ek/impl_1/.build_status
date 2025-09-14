@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BuildStatus>
     <Strategy name="Strategy1">
-        <Milestone name="Export" build_result="0" build_time="1757806900">
-            <Task name="Bitgen" build_result="0" update_result="2" update_time="1757806900"/>
+        <Milestone name="Export" build_result="0" build_time="1757821774">
+            <Task name="Bitgen" build_result="0" update_result="2" update_time="1757821774"/>
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Map" build_result="0" build_time="1757806900">
-            <Task name="Map" build_result="0" update_result="2" update_time="1757806900"/>
+        <Milestone name="Map" build_result="0" build_time="1757821774">
+            <Task name="Map" build_result="0" update_result="2" update_time="1757821774"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="0" build_time="1757806900">
-            <Task name="PAR" build_result="0" update_result="2" update_time="1757806900"/>
+        <Milestone name="PAR" build_result="0" build_time="1757821774">
+            <Task name="PAR" build_result="0" update_result="2" update_time="1757821774"/>
             <Task name="PostParVM" build_result="0" update_result="3" update_time="0"/>
-            <Task name="PARTrace" build_result="0" update_result="2" update_time="1757806900"/>
+            <Task name="PARTrace" build_result="0" update_result="2" update_time="1757821774"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="0" build_time="1757806900">
-            <Task name="Lattice_Synthesis" build_result="0" update_result="2" update_time="1757806900"/>
-            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1757806900"/>
-            <Task name="LSE_Lint" build_result="0" update_result="2" update_time="1757797092"/>
-            <Task name="SynTrace" build_result="0" update_result="2" update_time="1757797092"/>
-            <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1757797092"/>
+        <Milestone name="Synthesis" build_result="1" build_time="1757824443">
+            <Task name="Lattice_Synthesis" build_result="1" update_result="2" update_time="1757824443"/>
+            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1757824443"/>
+            <Task name="LSE_Lint" build_result="0" update_result="2" update_time="1757821774"/>
+            <Task name="SynTrace" build_result="0" update_result="2" update_time="1757821774"/>
+            <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1757821774"/>
         </Milestone>
-        <Report name="lab3_ek_impl_1.bgn" last_build_time="1757806134" last_build_size="1195"/>
-        <Report name="lab3_ek_impl_1.bin" last_build_time="1757806134" last_build_size="104156"/>
+        <Report name="lab3_ek_impl_1.bgn" last_build_time="1757820066" last_build_size="1152"/>
+        <Report name="lab3_ek_impl_1.bin" last_build_time="1757820066" last_build_size="104156"/>
         <Report name="lab3_ek_impl_1.lsedata" last_build_time="0" last_build_size="0"/>
-        <Report name="lab3_ek_impl_1.twr.html" last_build_time="1757806127" last_build_size="12868"/>
-        <Report name="lab3_ek_impl_1.udb" last_build_time="1757806126" last_build_size="9006"/>
-        <Report name="lab3_ek_impl_1_map.udb" last_build_time="1757806113" last_build_size="5281"/>
-        <Report name="lab3_ek_impl_1_rtl.udb" last_build_time="1757806108" last_build_size="2880"/>
-        <Report name="lab3_ek_impl_1_syn.udb" last_build_time="1757806108" last_build_size="3812"/>
+        <Report name="lab3_ek_impl_1.twr.html" last_build_time="1757820058" last_build_size="12868"/>
+        <Report name="lab3_ek_impl_1.udb" last_build_time="1757820058" last_build_size="8999"/>
+        <Report name="lab3_ek_impl_1_map.udb" last_build_time="1757820044" last_build_size="5298"/>
+        <Report name="lab3_ek_impl_1_rtl.udb" last_build_time="1757824346" last_build_size="2947"/>
+        <Report name="lab3_ek_impl_1_syn.udb" last_build_time="1757820039" last_build_size="3812"/>
     </Strategy>
 </BuildStatus>
