@@ -41,6 +41,8 @@ module numberbank(
 			{4'b1000, 4'b0010}:   new_number = 4'b0000;
 			{4'b1000, 4'b0100}:   new_number = 4'b1111;
 			{4'b1000, 4'b0100}:   new_number = 4'b1101;
+			
+			default:              new_number = 4'b0000;
 		endcase
 	end
 	
@@ -67,7 +69,7 @@ module numberbank(
 			s2 = s2;
 			s1 = s1;
 		end
-		if (state == update) begin
+		else begin
 			s2 = s1;
 			s1 = new_number;
 		end

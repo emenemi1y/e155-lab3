@@ -22,15 +22,16 @@ module top(input logic reset,
 	assign BOUNCE_CYCLE_WAIT = 23'd150000;
 		
 	logic [3:0] sync_R;
-	logic key_press;
+	logic key_press, debounce;
 	logic [3:0] R_press;
 	logic [3:0] s1, s2, s;
 		
 	// synchronize R input to clock
-	always_ff @(posedge clk)
+	always_ff @(posedge clk) begin
 		if(~reset) sync_R <= 4'b0;
 		else	  sync_R <= R;
-	
+	end		
+			
 	// number of cycles for seven segment display and scanner
 	logic [23:0] SCANNER_CYCLES;
 	assign SCANNER_CYCLES = 24'd15;
@@ -42,9 +43,12 @@ module top(input logic reset,
 	counter counter1(clk, reset, SCANNER_CYCLES, clk_scan);
 	counter counter2(clk, reset, SEVSEG_CYCLES, sel);
 	
-	scanner scanner1(clk, sync_R, BOUNCE_CYCLE_WAIT, C, R_press, key_press);
+	debounce debouncer(clk_scan, reset, BOUNCE_CYCLE_WAIT, debounce, debounce_done);
+	
+	scanner scanner1(clk_scan, reset, sync_R, BOUNCE_CYCLE_WAIT, C, R_press, key_press, debounce, debounce_done);
 	numberbank bank(clk, reset, R_press, C, key_press, s1, s2);
 
+	
 	
 	// apply power to correct seven-segement display
 	assign seg_power[0] = sel;

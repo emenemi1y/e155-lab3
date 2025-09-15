@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Sep 14 17:09:49 2025
+Sun Sep 14 21:53:13 2025
 
 
 Command Line:  C:\lscc\radiant\2024.2\ispfpga\bin\nt64\synthesis.exe -f C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/impl_1/lab3_ek_impl_1_lattice.synproj -logfile lab3_ek_impl_1_lattice.srp -gui -msgset C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/promote.xml 
@@ -118,6 +118,7 @@ Verilog design file: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/sourc
 Verilog design file: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/counter.sv
 Verilog design file: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/scanner.sv
 Verilog design file: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/numberbank.sv
+Verilog design file: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/debounce.sv
 VHDL library: pmi
 VHDL design file: C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.vhd
 WARNING <35935050> - synthesis: input port TRIM9 is not connected on this instance. VDB-5050
@@ -173,6 +174,7 @@ Analyzing Verilog file c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/sou
 Analyzing Verilog file c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/counter.sv. VERI-1482
 Analyzing Verilog file c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv. VERI-1482
 Analyzing Verilog file c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv. VERI-1482
+Analyzing Verilog file c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/debounce.sv. VERI-1482
 Analyzing VHDL file c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.vhd. VHDL-1481
 Analyzing VHDL file c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.vhd
 
@@ -184,15 +186,11 @@ INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_
 INFO <35901018> - synthesis: C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
 INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/sevseg.sv(9): compiling module sevseg. VERI-1018
 INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/counter.sv(9): compiling module counter. VERI-1018
+INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/debounce.sv(9): compiling module debounce. VERI-1018
 INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(10): compiling module scanner. VERI-1018
-WARNING <35901899> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(116): behavior inside always_comb block does not represent combinational logic. VERI-1899
-WARNING <35901330> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(45): actual bit length 4 differs from formal bit length 1 for port reset. VERI-1330
-WARNING <35901330> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(45): actual bit length 24 differs from formal bit length 4 for port R. VERI-1330
-WARNING <35901330> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(45): actual bit length 4 differs from formal bit length 24 for port bounce_cycle_wait. VERI-1330
-WARNING <35901330> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(45): actual bit length 1 differs from formal bit length 4 for port R_press. VERI-1330
+WARNING <35901899> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(106): behavior inside always_comb block does not represent combinational logic. VERI-1899
 INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(9): compiling module numberbank. VERI-1018
-WARNING <35901899> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(45): behavior inside always_comb block does not represent combinational logic. VERI-1899
-WARNING <35901899> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(74): behavior inside always_comb block does not represent combinational logic. VERI-1899
+WARNING <35901899> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(76): behavior inside always_comb block does not represent combinational logic. VERI-1899
 [Parameter Setting Section Start]
 
 	[Parameter Settings for Instance(s): hf_osc]
@@ -200,14 +198,9 @@ WARNING <35901899> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/la
 		CLKHF_DIV                 2'b01
 
 [Parameter Setting Section End]
-WARNING <35935047> - synthesis: Unused instance counter1 is removed. VDB-5047
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: R[3]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: R[2]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: R[1]
-######## Missing driver on net C[3]. Patching with GND.
-######## Missing driver on net C[2]. Patching with GND.
-######## Missing driver on net C[1]. Patching with GND.
-######## Missing driver on net C[0]. Patching with GND.
+WARNING <35935047> - synthesis: Unused instance debouncer is removed. VDB-5047
+WARNING <35931002> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(16): net \scanner1/debounce_done does not have a driver. VDB-1002
+######## Missing driver on net \scanner1/debounce_done. Patching with GND.
 INFO <35001774> - synthesis: Extracted state machine for register '\scanner1/state' with one-hot encoding
 State machine has 9 reachable states with original encodings of:
 
@@ -249,66 +242,151 @@ original encoding -> new encoding (one-hot encoding)
 
  1001 -> 100000000
 
-WARNING <35935043> - synthesis: Latch \scanner1/R_press_i1 input is stuck at Zero. VDB-5043
 INFO <35001774> - synthesis: Extracted state machine for register '\bank/state' with one-hot encoding
-State machine has 1 reachable states with original encodings of:
+State machine has 3 reachable states with original encodings of:
 
  00 
 
+ 01 
+
+ 10 
+
 original encoding -> new encoding (one-hot encoding)
 
- 00 -> 1
+ 00 -> 001
+
+ 01 -> 010
+
+ 10 -> 100
 
 
 
 
 CRITICAL <35001747> - synthesis: Bit(s) of register \scanner1/state_FSM stuck at '0': 15, 14, 13, 12, 11, 10, 8
-CRITICAL <35001747> - synthesis: Bit(s) of register \bank/state_FSM stuck at '0': 3, 2
-CRITICAL <35001747> - synthesis: Bit(s) of register \bank/state_FSM stuck at '0': 2
-CRITICAL <35001747> - synthesis: Bit(s) of register \scanner1/state_FSM stuck at '0': 7, 6, 5, 4
-######## Missing driver on net s1[3]. Patching with GND.
-######## Missing driver on net s1[2]. Patching with GND.
-######## Missing driver on net s1[1]. Patching with GND.
-######## Missing driver on net s1[0]. Patching with GND.
-######## Missing driver on net s2[3]. Patching with GND.
-######## Missing driver on net s2[2]. Patching with GND.
-######## Missing driver on net s2[1]. Patching with GND.
-######## Missing driver on net s2[0]. Patching with GND.
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: R[3]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: R[2]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: R[1]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: R[0]
+CRITICAL <35001747> - synthesis: Bit(s) of register \bank/state_FSM stuck at '0': 3
+Combinational loop due to latch found: 1
+
+	Instance key_press_I_0 
+
+	Net key_press 
+
+Combinational loop due to latch found: 2
+
+	Instance R_press_0__I_0 
+
+	Net R_press[0] 
+
+Combinational loop due to latch found: 3
+
+	Instance s1_0__I_0 
+
+	Net s2[0] 
+
+Combinational loop due to latch found: 4
+
+	Instance \bank/new_number_0__I_0 
+
+	Net s1[0] 
+
+Combinational loop due to latch found: 5
+
+	Instance R_press_1__I_0 
+
+	Net R_press[1] 
+
+Combinational loop due to latch found: 6
+
+	Instance R_press_2__I_0 
+
+	Net R_press[2] 
+
+Combinational loop due to latch found: 7
+
+	Instance R_press_3__I_0 
+
+	Net R_press[3] 
+
+Combinational loop due to latch found: 8
+
+	Instance s1_1__I_0 
+
+	Net s2[1] 
+
+Combinational loop due to latch found: 9
+
+	Instance s1_2__I_0 
+
+	Net s2[2] 
+
+Combinational loop due to latch found: 10
+
+	Instance s1_3__I_0 
+
+	Net s2[3] 
+
+Combinational loop due to latch found: 11
+
+	Instance \bank/new_number_1__I_0 
+
+	Net s1[1] 
+
+Combinational loop due to latch found: 12
+
+	Instance \bank/new_number_2__I_0 
+
+	Net s1[2] 
+
+Combinational loop due to latch found: 13
+
+	Instance \bank/new_number_3__I_0 
+
+	Net s1[3] 
+
+CRITICAL <35001783> - synthesis: Mapping latch key_press_I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch R_press_0__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch s1_0__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch \bank/new_number_0__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch R_press_1__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch R_press_2__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch R_press_3__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch s1_1__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch s1_2__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch s1_3__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch \bank/new_number_1__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch \bank/new_number_2__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch \bank/new_number_3__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
 
 ################### Begin Area Report (top)######################
-Number of register bits => 25 of 5280 (0 % )
-CCU2 => 13
-FD1P3XZ => 25
+Number of register bits => 66 of 5280 (1 % )
+CCU2 => 26
+FD1P3XZ => 66
 HSOSC => 1
-IB => 1
-LUT4 => 11
+IB => 5
+LUT4 => 102
 OB => 13
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
-Number of even-length carry chains : 1
+Number of even-length carry chains : 2
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 1
+Number of Clocks: 2
   Net : clk, loads : 0
+  Net : counter1/clk_scan, loads : 1
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : counter2/n403, loads : 32
+  Net : counter2/n333, loads : 32
+  Net : counter1/n330, loads : 31
+  Net : bank/n4, loads : 17
+  Net : scanner1/n19, loads : 15
+  Net : scanner1/C_c_2, loads : 14
+  Net : counter1/n1329, loads : 14
+  Net : counter1/n101[23], loads : 14
+  Net : counter2/n1354, loads : 14
   Net : counter2/n101[23], loads : 14
-  Net : counter2/n541, loads : 14
-  Net : counter2/n101[22], loads : 13
-  Net : counter2/n539, loads : 13
-  Net : counter2/n101[21], loads : 13
-  Net : counter2/n537, loads : 12
-  Net : counter2/n101[19], loads : 12
-  Net : counter2/n101[20], loads : 12
-  Net : counter2/n535, loads : 11
+  Net : counter1/n1327, loads : 13
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -317,10 +395,10 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 97 MB
+Peak Memory Usage: 96 MB
 
 --------------------------------------------------------------
 Total CPU Time: 5 secs 
-Total REAL Time: 11 secs 
+Total REAL Time: 8 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: fdec7c6cba113941f3db92b2acee550d8fbb2225
+Checksum -- synthesis -- netlist: c884de13ffa3d8b757fef50041e0bacfe94e7534
