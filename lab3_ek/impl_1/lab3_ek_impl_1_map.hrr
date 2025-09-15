@@ -1,9 +1,22 @@
 ---------------------------------------------------
-Report for cell numberbank
-   Instance path: numberbank
+Report for cell top
+   Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         59        100.0
-                               LUTGATE	         59        100.0
-                                 IOBUF	         19        100.0
-                                PFUREG	          3        100.0
+                                  LUT4	         39        100.0
+                               LUTGATE	         13        100.0
+                                LUTCCU	         26        100.0
+                                 IOBUF	         14        100.0
+                                PFUREG	         25        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                               counter	          1        89.7
+---------------------------------------------------
+Report for cell counter
+   Instance path: top/counter2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         35        89.7
+                               LUTGATE	          9        69.2
+                                LUTCCU	         26        100.0
+                                PFUREG	         25        100.0

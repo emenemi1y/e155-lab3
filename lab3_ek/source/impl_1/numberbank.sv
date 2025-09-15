@@ -8,8 +8,8 @@ when a number key is pressed.
 
 module numberbank(
 	input logic clk, reset,
-	input logic [3:0] R_val, C_val,
-	input logic key_pressed,
+	input logic [3:0] R_val, C,
+	input logic key_press,
 	output logic [3:0] s1, s2
 	);
 	
@@ -21,7 +21,7 @@ module numberbank(
 	
 	logic [3:0] new_number;
 	always_comb begin
-		case ({R_val, C_val})
+		case ({R_val, C})
 			{4'b0001, 4'b0001}:   new_number = 4'b0001;
 			{4'b0001, 4'b0010}:   new_number = 4'b0010;
 			{4'b0001, 4'b0100}:   new_number = 4'b0011;
@@ -52,10 +52,10 @@ module numberbank(
 	// next state logic 
 	always_comb begin
 		case(state)
-			hold:	if (key_pressed) nextstate = update;
+			hold:	if (key_press) nextstate = update;
 					else             nextstate = hold;
 			update:                  nextstate = stall;
-			stall: 	if (key_pressed) nextstate = stall;
+			stall: 	if (key_press) nextstate = stall;
 					else             nextstate = hold;
 			
 			default:                 nextstate = hold;

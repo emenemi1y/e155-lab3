@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="Export">
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
+    </Task>
     <Task name="Synthesis">
         <Message>
             <ID>35935050</ID>
@@ -337,6 +344,93 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
+            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(9): </Dynamic>
+            <Dynamic>top</Dynamic>
+            <Navigation>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
+            <Dynamic>HSOSC(CLKHF_DIV=2'b01)</Dynamic>
+            <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
+            <Navigation>756</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/sevseg.sv(9): </Dynamic>
+            <Dynamic>sevseg</Dynamic>
+            <Navigation>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/sevseg.sv</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/counter.sv(9): </Dynamic>
+            <Dynamic>counter</Dynamic>
+            <Navigation>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/counter.sv</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(10): </Dynamic>
+            <Dynamic>scanner</Dynamic>
+            <Navigation>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv</Navigation>
+            <Navigation>10</Navigation>
+        </Message>
+        <Message>
+            <ID>35901899</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(116): </Dynamic>
+            <Navigation>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv</Navigation>
+            <Navigation>116</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(45): </Dynamic>
+            <Dynamic>4</Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>reset</Dynamic>
+            <Navigation>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv</Navigation>
+            <Navigation>45</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(45): </Dynamic>
+            <Dynamic>24</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Dynamic>R</Dynamic>
+            <Navigation>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv</Navigation>
+            <Navigation>45</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(45): </Dynamic>
+            <Dynamic>4</Dynamic>
+            <Dynamic>24</Dynamic>
+            <Dynamic>bounce_cycle_wait</Dynamic>
+            <Navigation>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv</Navigation>
+            <Navigation>45</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(45): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Dynamic>R_press</Dynamic>
+            <Navigation>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv</Navigation>
+            <Navigation>45</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
             <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(9): </Dynamic>
             <Dynamic>numberbank</Dynamic>
             <Navigation>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv</Navigation>
@@ -357,76 +451,211 @@
             <Navigation>74</Navigation>
         </Message>
         <Message>
+            <ID>35935047</ID>
+            <Severity>16</Severity>
+            <Dynamic>counter1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002028</ID>
+            <Severity>256</Severity>
+            <Dynamic>R[3]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002028</ID>
+            <Severity>256</Severity>
+            <Dynamic>R[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002028</ID>
+            <Severity>256</Severity>
+            <Dynamic>R[1]</Dynamic>
+        </Message>
+        <Message>
             <ID>35001774</ID>
             <Severity>1</Severity>
-            <Dynamic>state</Dynamic>
+            <Dynamic>\scanner1/state</Dynamic>
+            <Dynamic>one-hot</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935043</ID>
+            <Severity>16</Severity>
+            <Dynamic>\scanner1/R_press_i1</Dynamic>
+            <Dynamic>input</Dynamic>
+            <Dynamic>Zero</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001774</ID>
+            <Severity>1</Severity>
+            <Dynamic>\bank/state</Dynamic>
             <Dynamic>one-hot</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>
             <Severity>256</Severity>
-            <Dynamic>state_FSM</Dynamic>
-            <Dynamic>3</Dynamic>
+            <Dynamic>\scanner1/state_FSM</Dynamic>
+            <Dynamic>15, 14, 13, 12, 11, 10, 8</Dynamic>
         </Message>
         <Message>
-            <ID>35001783</ID>
+            <ID>35001747</ID>
             <Severity>256</Severity>
-            <Dynamic>new_number_2__I_0_2</Dynamic>
+            <Dynamic>\bank/state_FSM</Dynamic>
+            <Dynamic>3, 2</Dynamic>
         </Message>
         <Message>
-            <ID>35001783</ID>
+            <ID>35001747</ID>
             <Severity>256</Severity>
-            <Dynamic>s1_c_0_I_0</Dynamic>
+            <Dynamic>\bank/state_FSM</Dynamic>
+            <Dynamic>2</Dynamic>
         </Message>
         <Message>
-            <ID>35001783</ID>
+            <ID>35001747</ID>
             <Severity>256</Severity>
-            <Dynamic>new_number_0__I_0</Dynamic>
+            <Dynamic>\scanner1/state_FSM</Dynamic>
+            <Dynamic>7, 6, 5, 4</Dynamic>
         </Message>
         <Message>
-            <ID>35001783</ID>
+            <ID>35002028</ID>
             <Severity>256</Severity>
-            <Dynamic>new_number_1__I_0_2</Dynamic>
+            <Dynamic>R[3]</Dynamic>
         </Message>
         <Message>
-            <ID>35001783</ID>
+            <ID>35002028</ID>
             <Severity>256</Severity>
-            <Dynamic>new_number_0__I_0_2</Dynamic>
+            <Dynamic>R[2]</Dynamic>
         </Message>
         <Message>
-            <ID>35001783</ID>
+            <ID>35002028</ID>
             <Severity>256</Severity>
-            <Dynamic>new_number_3__I_0_2</Dynamic>
+            <Dynamic>R[1]</Dynamic>
         </Message>
         <Message>
-            <ID>35001783</ID>
+            <ID>35002028</ID>
             <Severity>256</Severity>
-            <Dynamic>s1_c_1_I_0</Dynamic>
+            <Dynamic>R[0]</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Map">
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[3]</Dynamic>
         </Message>
         <Message>
-            <ID>35001783</ID>
-            <Severity>256</Severity>
-            <Dynamic>s1_c_2_I_0</Dynamic>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[2]</Dynamic>
         </Message>
         <Message>
-            <ID>35001783</ID>
-            <Severity>256</Severity>
-            <Dynamic>s1_c_3_I_0</Dynamic>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[1]</Dynamic>
         </Message>
         <Message>
-            <ID>35001783</ID>
-            <Severity>256</Severity>
-            <Dynamic>new_number_1__I_0</Dynamic>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[0]</Dynamic>
         </Message>
         <Message>
-            <ID>35001783</ID>
-            <Severity>256</Severity>
-            <Dynamic>new_number_2__I_0</Dynamic>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[3]</Dynamic>
         </Message>
         <Message>
-            <ID>35001783</ID>
-            <Severity>256</Severity>
-            <Dynamic>new_number_3__I_0</Dynamic>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[0]</Dynamic>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[3]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[0]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[3]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[0]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[3]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[0]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[3]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>R[0]</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

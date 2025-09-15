@@ -50,7 +50,7 @@
 
 
 -path "C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek"
--top numberbank
+-top top
 -udb "lab3_ek_impl_1_rtl.udb"
 -output_hdl "lab3_ek_impl_1.vm"
 

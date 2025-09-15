@@ -37,7 +37,7 @@ module scanner (input logic clk,
 						nextstate = S4;
 						key_press = 1'b1;
 						R_press   = R; 
-						i = 0; end
+						i = 24'b0; end
 			S1: 	if (~|R) begin
 						nextstate = S2;
 						key_press = 1'b0; end
@@ -45,7 +45,7 @@ module scanner (input logic clk,
 						nextstate = S5;
 						key_press = 1'b1;
 						R_press   = R; 
-						i = 0; end
+						i = 24'b0; end
 			S2: 	if (~|R) begin
 						nextstate = S3;
 						key_press = 1'b0; end
@@ -53,7 +53,7 @@ module scanner (input logic clk,
 						nextstate = S6;
 						key_press = 1'b1;
 						R_press   = R; 
-						i = 0; end
+						i = 24'b0; end
 			S3:     if (~|R) begin
 						nextstate = S0;
 						key_press = 1'b0; end
@@ -61,11 +61,11 @@ module scanner (input logic clk,
 						nextstate = S7;
 						key_press = 1'b1;
 						R_press   = R; 
-						i = 0; end
+						i = 24'b0; end
 						
 			S4: 	if (i < bounce_cycle_wait) begin 
 						nextstate = S4;
-						i = i + 1;
+						i = i + 24'b1;
 					end
 					else begin
 						if (~|R) begin
@@ -76,7 +76,7 @@ module scanner (input logic clk,
 
 			S5:    	if (i < bounce_cycle_wait) begin
 						nextstate = S5;
-						i = i + 1;
+						i = i + 24'b1;
 					end
 					else begin
 						if (~|R) begin
@@ -86,7 +86,7 @@ module scanner (input logic clk,
 					end
 			S6:    	if (i < bounce_cycle_wait) begin
 						nextstate = S6;
-						i = i + 1;
+						i = i + 24'b1;
 					end
 					else begin
 						if (~|R) begin
@@ -96,7 +96,7 @@ module scanner (input logic clk,
 					end
 			S7: 	if (i < bounce_cycle_wait) begin
 						nextstate = S7;
-						i = i + 1;
+						i = i + 24'b1;
 					end
 					else begin 
 						if (~|R) begin

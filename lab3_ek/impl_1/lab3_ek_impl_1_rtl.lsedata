@@ -1,7 +1,7 @@
-<top name = "numberbank"  library = "work"  arch = ""  entry = "Verilog">
+<top name = "top"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
-    <clockitem name = "clk"  type = "port" />
+    <clockitem name = "clk"  type = "net" />
 </clocks>
 
 <!--

@@ -1,0 +1,7 @@
+DRC: Design Rule Check Radiant Software (64-bit) 2024.2.0.3.0
+Sun Sep 14 17:03:45 2025
+
+WARNING <71003020> - Top module port 'R[3]' does not connect to anything.
+WARNING <71003020> - Top module port 'R[2]' does not connect to anything.
+WARNING <71003020> - Top module port 'R[1]' does not connect to anything.
+WARNING <71003020> - Top module port 'R[0]' does not connect to anything.

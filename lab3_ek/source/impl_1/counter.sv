@@ -12,20 +12,20 @@ module counter(
 	output logic new_clk
 );
 
-	logic [24:0] count;
+	logic [23:0] count;
 
 	// counter
 	always_ff @(posedge clk) begin
 		if (reset == 0) begin
-			count <= 0;
+			count <= 24'b0;
 			new_clk <= 0;
 		end
 		else begin
 			if (count == num_cycles) begin
-				count <= 0;
+				count <= 24'b0;
 				new_clk <= ~new_clk;
 			end
-			else count <= count + 1;
+			else count <= count + 2'b1;
 		end
 	end
 

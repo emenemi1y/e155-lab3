@@ -13,8 +13,6 @@ module top(input logic reset,
 		   output logic [1:0] seg_power
 );
 
-   
-
 	// instantiate clock
 	logic clk, sel;
 	HSOSC #(.CLKHF_DIV(2'b01))
@@ -24,6 +22,9 @@ module top(input logic reset,
 	assign BOUNCE_CYCLE_WAIT = 23'd150000;
 		
 	logic [3:0] sync_R;
+	logic key_press;
+	logic [3:0] R_press;
+	logic [3:0] s1, s2, s;
 		
 	// synchronize R input to clock
 	always_ff @(posedge clk)
@@ -38,15 +39,17 @@ module top(input logic reset,
 	
 	// instantiate modules 
 	sevseg sevseg_logic(s, seg);
-	counter counter1(clk, reset, SCANNER_CYCLES, clk_scan, SCANNER_F);
+	counter counter1(clk, reset, SCANNER_CYCLES, clk_scan);
 	counter counter2(clk, reset, SEVSEG_CYCLES, sel);
 	
-	number_bank bank(clk, reset, key_press, R_press, C_val, s1, s2);
 	scanner scanner1(clk, sync_R, BOUNCE_CYCLE_WAIT, C, R_press, key_press);
+	numberbank bank(clk, reset, R_press, C, key_press, s1, s2);
+
 	
 	// apply power to correct seven-segement display
 	assign seg_power[0] = sel;
 	assign seg_power[1] = ~sel; 
+	
 	
 	// mux to determine which number is currently displayed on seven-segment display
 	assign s = sel ? s1 : s2;
