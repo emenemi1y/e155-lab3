@@ -1,0 +1,25 @@
+#Start recording tcl command: 9/15/2025 20:03:30
+#Project Location: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek; Project name: lab3_ek
+prj_open "C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/lab3_ek.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/15/2025 20:54:22

@@ -11,23 +11,24 @@ module scanner (input logic clk,
 				input logic reset,
 				input logic [3:0] R,
 				input logic [23:0] bounce_cycle_wait,
+				input logic debounce_done,
 				output logic [3:0] C,
 				output logic [3:0] R_press,
-				output logic key_press, debounce, debounce_done
+				output logic key_press, debounce
 				);
 				
 	// define states 
-	typedef enum logic [3:0] {S0, S1, S2, S3, S4, S5, S6, S7, S8, S9} statetype;
+	typedef enum logic [3:0] {S0, S1, S2, S3, S4, S5, S6, S7, S8} statetype;
 	statetype state, nextstate;
 			
 	always_ff @(posedge clk)
-		if (~reset) state <= S9;
+		if (~reset) state <= S8;
 	    else 	   state <= nextstate;
 			
 	// next state logic
 	always_comb
 		case (state)
-			S0:     if (~|R) begin
+			S0:     if (R == 0) begin
 						nextstate = S1;
 						key_press = 1'b0; end
 					else begin 
@@ -36,7 +37,7 @@ module scanner (input logic clk,
 						R_press   = R; 
 						debounce  = 1'b1; end
 						
-			S1: 	if (~|R) begin
+			S1: 	if (R == 0) begin
 						nextstate = S2;
 						key_press = 1'b0; end
 					else begin 
@@ -45,7 +46,7 @@ module scanner (input logic clk,
 						R_press   = R; 
 						debounce  = 1'b1; end
 						
-			S2: 	if (~|R) begin
+			S2: 	if (R == 0) begin
 						nextstate = S3;
 						key_press = 1'b0; end
 					else begin 
@@ -54,7 +55,7 @@ module scanner (input logic clk,
 						R_press   = R; 
 						debounce  = 1'b1; end
 						
-			S3:     if (~|R) begin
+			S3:     if (R == 0) begin
 						nextstate = S0;
 						key_press = 1'b0; end
 					else begin 
@@ -65,7 +66,8 @@ module scanner (input logic clk,
 						
 			S4: 	if (~debounce_done) nextstate = S4;
 					else begin
-						if (~|R) begin
+						debounce = 1'b0;
+						if (R == 0) begin
 							nextstate = S1;
 							key_press = 1'b0; end
 						else nextstate = S4;
@@ -73,7 +75,8 @@ module scanner (input logic clk,
 
 			S5:    	if (~debounce_done) nextstate = S5;
 					else begin
-						if (~|R) begin
+						debounce = 1'b0;
+						if (R == 0) begin
 							nextstate = S2;
 							key_press = 1'b0; end
 						else nextstate = S5; 
@@ -81,7 +84,8 @@ module scanner (input logic clk,
 					
 			S6:    	if (~debounce_done) nextstate = S6;
 					else begin
-						if (~|R) begin
+						debounce = 1'b0;
+						if (R == 0) begin
 							nextstate = S3;
 							key_press = 1'b0; end
 						else nextstate = S6; 
@@ -89,17 +93,18 @@ module scanner (input logic clk,
 					
 			S7: 	if (~debounce_done) nextstate = S7;
 					else begin 
-						if (~|R) begin
+						debounce = 1'b0;
+						if (R == 0) begin
 							nextstate = S0;
 							key_press = 1'b0; end
 						else nextstate = S7;
 					end
 						
-			S9:		nextstate = S0;
+			S8:		nextstate = S0;
 						
 						
 											
-			default:	begin  nextstate = S9;
+			default:	begin  nextstate = S8;
 				key_press = 1'b1; 
 				R_press = 4'b0001; end
 			
@@ -107,7 +112,7 @@ module scanner (input logic clk,
 	
 	// output logic
 	always_comb begin
-		if (state == S9) begin
+		if (state == S8) begin
 			C = 4'b0100; end
 		else begin
 			C[0] = (state == S0) || (state == S4);

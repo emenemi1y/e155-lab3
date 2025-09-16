@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
-    <Task name="Export">
-        <Message>
-            <ID>1081100</ID>
-            <Severity>1</Severity>
-            <Dynamic>Bitstream authenticated.</Dynamic>
-        </Message>
-    </Task>
     <Task name="Synthesis">
         <Message>
             <ID>35935050</ID>
@@ -353,7 +346,7 @@
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
-            <Dynamic>HSOSC(CLKHF_DIV=2'b01)</Dynamic>
+            <Dynamic>HSOSC(CLKHF_DIV=&quot;0b11&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>756</Navigation>
         </Message>
@@ -392,9 +385,9 @@
         <Message>
             <ID>35901899</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(106): </Dynamic>
+            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(111): </Dynamic>
             <Navigation>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv</Navigation>
-            <Navigation>106</Navigation>
+            <Navigation>111</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -407,22 +400,9 @@
         <Message>
             <ID>35901899</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(76): </Dynamic>
+            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(97): </Dynamic>
             <Navigation>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv</Navigation>
-            <Navigation>76</Navigation>
-        </Message>
-        <Message>
-            <ID>35935047</ID>
-            <Severity>16</Severity>
-            <Dynamic>debouncer</Dynamic>
-        </Message>
-        <Message>
-            <ID>35931002</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(16): </Dynamic>
-            <Dynamic>\scanner1/debounce_done</Dynamic>
-            <Navigation>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv</Navigation>
-            <Navigation>16</Navigation>
+            <Navigation>97</Navigation>
         </Message>
         <Message>
             <ID>35001774</ID>
@@ -440,7 +420,7 @@
             <ID>35001747</ID>
             <Severity>256</Severity>
             <Dynamic>\scanner1/state_FSM</Dynamic>
-            <Dynamic>15, 14, 13, 12, 11, 10, 8</Dynamic>
+            <Dynamic>15, 14, 13, 12, 11, 10, 9</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>
@@ -512,6 +492,13 @@
             <ID>35001783</ID>
             <Severity>256</Severity>
             <Dynamic>\bank/new_number_3__I_0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Export">
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>
