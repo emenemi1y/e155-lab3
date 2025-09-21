@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Sep 15 20:36:15 2025
+Sun Sep 21 13:44:08 2025
 
 
 Command Line:  C:\lscc\radiant\2024.2\ispfpga\bin\nt64\synthesis.exe -f C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/impl_1/lab3_ek_impl_1_lattice.synproj -logfile lab3_ek_impl_1_lattice.srp -gui -msgset C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/promote.xml 
@@ -188,7 +188,7 @@ INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_
 INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/counter.sv(9): compiling module counter. VERI-1018
 INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/debounce.sv(9): compiling module debounce. VERI-1018
 INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(10): compiling module scanner. VERI-1018
-WARNING <35901899> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(111): behavior inside always_comb block does not represent combinational logic. VERI-1899
+WARNING <35901899> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(147): behavior inside always_comb block does not represent combinational logic. VERI-1899
 INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(9): compiling module numberbank. VERI-1018
 WARNING <35901899> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(97): behavior inside always_comb block does not represent combinational logic. VERI-1899
 [Parameter Setting Section Start]
@@ -263,83 +263,76 @@ CRITICAL <35001747> - synthesis: Bit(s) of register \scanner1/state_FSM stuck at
 CRITICAL <35001747> - synthesis: Bit(s) of register \bank/state_FSM stuck at '0': 3
 Combinational loop due to latch found: 1
 
-	Instance key_press_I_0 
-
-	Net key_press 
-
-Combinational loop due to latch found: 2
-
 	Instance R_press_0__I_0 
 
 	Net R_press[0] 
 
-Combinational loop due to latch found: 3
+Combinational loop due to latch found: 2
 
 	Instance s1_0__I_0 
 
 	Net s2[0] 
 
-Combinational loop due to latch found: 4
+Combinational loop due to latch found: 3
 
 	Instance \bank/new_number_0__I_0 
 
 	Net s1[0] 
 
-Combinational loop due to latch found: 5
+Combinational loop due to latch found: 4
 
 	Instance R_press_1__I_0 
 
 	Net R_press[1] 
 
-Combinational loop due to latch found: 6
+Combinational loop due to latch found: 5
 
 	Instance R_press_2__I_0 
 
 	Net R_press[2] 
 
-Combinational loop due to latch found: 7
+Combinational loop due to latch found: 6
 
 	Instance R_press_3__I_0 
 
 	Net R_press[3] 
 
-Combinational loop due to latch found: 8
+Combinational loop due to latch found: 7
 
 	Instance s1_1__I_0 
 
 	Net s2[1] 
 
-Combinational loop due to latch found: 9
+Combinational loop due to latch found: 8
 
 	Instance s1_2__I_0 
 
 	Net s2[2] 
 
-Combinational loop due to latch found: 10
+Combinational loop due to latch found: 9
 
 	Instance s1_3__I_0 
 
 	Net s2[3] 
 
-Combinational loop due to latch found: 11
+Combinational loop due to latch found: 10
 
 	Instance \bank/new_number_1__I_0 
 
 	Net s1[1] 
 
-Combinational loop due to latch found: 12
+Combinational loop due to latch found: 11
 
 	Instance \bank/new_number_2__I_0 
 
 	Net s1[2] 
 
-Combinational loop due to latch found: 13
+Combinational loop due to latch found: 12
 
 	Instance \bank/new_number_3__I_0 
 
 	Net s1[3] 
 
-CRITICAL <35001783> - synthesis: Mapping latch key_press_I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
 CRITICAL <35001783> - synthesis: Mapping latch R_press_0__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
 CRITICAL <35001783> - synthesis: Mapping latch s1_0__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
 CRITICAL <35001783> - synthesis: Mapping latch \bank/new_number_0__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
@@ -359,7 +352,7 @@ CCU2 => 26
 FD1P3XZ => 67
 HSOSC => 1
 IB => 5
-LUT4 => 109
+LUT4 => 104
 OB => 13
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
@@ -373,16 +366,16 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : debouncer/debounce_counter/n333, loads : 33
-  Net : debouncer/debounce_counter/n329, loads : 22
+  Net : debouncer/debounce_counter/n338, loads : 33
+  Net : counter2/n335, loads : 32
   Net : debouncer/debounce_counter/n4, loads : 16
-  Net : counter2/n1629, loads : 14
+  Net : scanner1/n19, loads : 16
+  Net : counter2/n1369, loads : 14
   Net : counter2/n101[23], loads : 14
-  Net : debouncer/debounce_counter/n1654, loads : 14
+  Net : debouncer/debounce_counter/n1394, loads : 14
   Net : debouncer/debounce_counter/n101[23], loads : 14
-  Net : counter2/n1627, loads : 13
+  Net : counter2/n1367, loads : 13
   Net : counter2/n101[21], loads : 13
-  Net : counter2/n101[22], loads : 13
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -391,10 +384,10 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 96 MB
+Peak Memory Usage: 95 MB
 
 --------------------------------------------------------------
 Total CPU Time: 5 secs 
-Total REAL Time: 8 secs 
+Total REAL Time: 12 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: a2ee620938d29676446a10d617fcdd71f1cf9d0
+Checksum -- synthesis -- netlist: 7425a8285e2072d4c6cc17d38e43b606a9ac2cd

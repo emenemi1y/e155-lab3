@@ -9,7 +9,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Sep 15 20:36:15 2025
+Sun Sep 21 13:44:08 2025
 
 
 Command Line:  C:\lscc\radiant\2024.2\ispfpga\bin\nt64\synthesis.exe -f C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/impl_1/lab3_ek_impl_1_lattice.synproj -logfile lab3_ek_impl_1_lattice.srp -gui -msgset C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/promote.xml 
@@ -192,7 +192,7 @@ INFO <35901018> - c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/i
 INFO <35901018> - c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/counter.sv(9): compiling module counter. VERI-1018
 INFO <35901018> - c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/debounce.sv(9): compiling module debounce. VERI-1018
 INFO <35901018> - c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(10): compiling module scanner. VERI-1018
-WARNING <35901899> - c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(111): behavior inside always_comb block does not represent combinational logic. VERI-1899
+WARNING <35901899> - c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(147): behavior inside always_comb block does not represent combinational logic. VERI-1899
 INFO <35901018> - c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(9): compiling module numberbank. VERI-1018
 WARNING <35901899> - c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(97): behavior inside always_comb block does not represent combinational logic. VERI-1899
 [Parameter Setting Section Start]
@@ -267,83 +267,76 @@ CRITICAL <35001747> - Bit(s) of register \scanner1/state_FSM stuck at '0': 15, 1
 CRITICAL <35001747> - Bit(s) of register \bank/state_FSM stuck at '0': 3
 Combinational loop due to latch found: 1
 
-	Instance key_press_I_0 
-
-	Net key_press 
-
-Combinational loop due to latch found: 2
-
 	Instance R_press_0__I_0 
 
 	Net R_press[0] 
 
-Combinational loop due to latch found: 3
+Combinational loop due to latch found: 2
 
 	Instance s1_0__I_0 
 
 	Net s2[0] 
 
-Combinational loop due to latch found: 4
+Combinational loop due to latch found: 3
 
 	Instance \bank/new_number_0__I_0 
 
 	Net s1[0] 
 
-Combinational loop due to latch found: 5
+Combinational loop due to latch found: 4
 
 	Instance R_press_1__I_0 
 
 	Net R_press[1] 
 
-Combinational loop due to latch found: 6
+Combinational loop due to latch found: 5
 
 	Instance R_press_2__I_0 
 
 	Net R_press[2] 
 
-Combinational loop due to latch found: 7
+Combinational loop due to latch found: 6
 
 	Instance R_press_3__I_0 
 
 	Net R_press[3] 
 
-Combinational loop due to latch found: 8
+Combinational loop due to latch found: 7
 
 	Instance s1_1__I_0 
 
 	Net s2[1] 
 
-Combinational loop due to latch found: 9
+Combinational loop due to latch found: 8
 
 	Instance s1_2__I_0 
 
 	Net s2[2] 
 
-Combinational loop due to latch found: 10
+Combinational loop due to latch found: 9
 
 	Instance s1_3__I_0 
 
 	Net s2[3] 
 
-Combinational loop due to latch found: 11
+Combinational loop due to latch found: 10
 
 	Instance \bank/new_number_1__I_0 
 
 	Net s1[1] 
 
-Combinational loop due to latch found: 12
+Combinational loop due to latch found: 11
 
 	Instance \bank/new_number_2__I_0 
 
 	Net s1[2] 
 
-Combinational loop due to latch found: 13
+Combinational loop due to latch found: 12
 
 	Instance \bank/new_number_3__I_0 
 
 	Net s1[3] 
 
-CRITICAL <35001783> - Mapping latch key_press_I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
 CRITICAL <35001783> - Mapping latch R_press_0__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
 CRITICAL <35001783> - Mapping latch s1_0__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
 CRITICAL <35001783> - Mapping latch \bank/new_number_0__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
@@ -363,7 +356,7 @@ CCU2 => 26
 FD1P3XZ => 67
 HSOSC => 1
 IB => 5
-LUT4 => 109
+LUT4 => 104
 OB => 13
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
@@ -377,16 +370,16 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : debouncer/debounce_counter/n333, loads : 33
-  Net : debouncer/debounce_counter/n329, loads : 22
+  Net : debouncer/debounce_counter/n338, loads : 33
+  Net : counter2/n335, loads : 32
   Net : debouncer/debounce_counter/n4, loads : 16
-  Net : counter2/n1629, loads : 14
+  Net : scanner1/n19, loads : 16
+  Net : counter2/n1369, loads : 14
   Net : counter2/n101[23], loads : 14
-  Net : debouncer/debounce_counter/n1654, loads : 14
+  Net : debouncer/debounce_counter/n1394, loads : 14
   Net : debouncer/debounce_counter/n101[23], loads : 14
-  Net : counter2/n1627, loads : 13
+  Net : counter2/n1367, loads : 13
   Net : counter2/n101[21], loads : 13
-  Net : counter2/n101[22], loads : 13
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -395,13 +388,13 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 96 MB
+Peak Memory Usage: 95 MB
 
 --------------------------------------------------------------
 Total CPU Time: 5 secs 
-Total REAL Time: 8 secs 
+Total REAL Time: 12 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: a2ee620938d29676446a10d617fcdd71f1cf9d0
+Checksum -- synthesis -- netlist: 7425a8285e2072d4c6cc17d38e43b606a9ac2cd
 
 
 
@@ -429,7 +422,7 @@ POSTSYN finished successfully.
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
 Peak Memory Usage: 43 MB
-Checksum -- postsyn: 3225bd9c25eeb797ea882fac8d6ce21878ec0af
+Checksum -- postsyn: 14703b009f9ab305dfde1fd2b05350c4c4bc57bb
 
 
 
@@ -463,8 +456,8 @@ Running general design DRC...
 Design Summary:
    Number of slice registers:  67 out of  5280 (1%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:           168 out of  5280 (3%)
-      Number of logic LUT4s:             110
+   Number of LUT4s:           163 out of  5280 (3%)
+      Number of logic LUT4s:             105
       Number of inserted feedthru LUT4s:   5
       Number of replicated LUT4s:          1
       Number of ripple logic:             26 (52 LUT4s)
@@ -495,19 +488,19 @@ Design Summary:
       Net VCC_net: 1 loads, 0 SLICEs
    Number of LSRs:  3
       Net n4: 17 loads, 17 SLICEs
-      Net n329: 13 loads, 13 SLICEs
-      Net debouncer.debounce_counter.n333: 13 loads, 13 SLICEs
+      Net counter2.n335: 13 loads, 13 SLICEs
+      Net debouncer.debounce_counter.n338: 13 loads, 13 SLICEs
    Top 10 highest fanout non-clock nets:
       Net n4: 17 loads
-      Net C_c_3_N_78[8]: 15 loads
-      Net debouncer.debounce_counter.n333: 13 loads
-      Net n329: 13 loads
-      Net C_c_3_N_78[3]: 11 loads
-      Net R_press[1]: 11 loads
-      Net C_c_3_N_78[7]: 10 loads
-      Net R_press[0]: 10 loads
-      Net R_press[2]: 10 loads
-      Net C_c_1: 9 loads
+      Net scanner1.n19: 14 loads
+      Net counter2.n335: 13 loads
+      Net C_c_3_N_78[8]: 13 loads
+      Net debouncer.debounce_counter.n338: 13 loads
+      Net debounce_done: 12 loads
+      Net C_c_2: 11 loads
+      Net C_c_3: 11 loads
+      Net C_c_3_N_78[5]: 10 loads
+      Net R_press[1]: 10 loads
 Running physical design DRC...
 
  
@@ -526,13 +519,13 @@ Total CPU Time: 0 secs
 Total REAL Time: 0 secs  
 Peak Memory Usage: 68 MB
 
-Checksum -- map: ae2109c13c34c752cba4ce64f8d93e6ab312918
+Checksum -- map: 8b52313d86f4e88710ee367aa04e577db58ebfb4
 Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /0 secs 
 
 pnmainc -log pnmain "lab3_ek_impl_1_par.tcl"
 
 PAR: Place And Route Radiant Software (64-bit) 2024.2.0.3.0.
-PARed on: Mon Sep 15 20:36:33 2025
+PARed on: Sun Sep 21 13:44:38 2025
 
 Command Line: par -w -t 1 -cores 1 -hsp m -exp parPathBased=ON \
 	lab3_ek_impl_1_map.udb lab3_ek_impl_1_par.dir/5_1.udb 
@@ -554,12 +547,12 @@ Constraint Summary
    Total number of constraints: 19
    Total number of constraints dropped: 0
 
-Number of Signals: 287
-Number of Connections: 709
+Number of Signals: 282
+Number of Connections: 696
 Device utilization summary:
 
-   SLICE (est.)      90/2640          3% used
-     LUT            168/5280          3% used
+   SLICE (est.)      88/2640          3% used
+     LUT            163/5280          3% used
      REG             67/5280          1% used
    PIO               18/56           32% used
                      18/36           50% bonded
@@ -593,17 +586,17 @@ Starting Placer Phase 1. CPU time: 0 secs , REAL time: 0 secs
 ..  ..
 ....................
 
-Placer score = 29223.
+Placer score = 28375.
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE             88/2640          3% used
+   SLICE             87/2640          3% used
 
 Finished Placer Phase 1. CPU time: 4 secs , REAL time: 5 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  41412
+Placer score =  41603
 Finished Placer Phase 2.  CPU time: 4 secs , REAL time: 5 secs 
 
 
@@ -635,11 +628,11 @@ I/O Bank Usage Summary:
 Total Placer CPU time: 4 secs , REAL time: 5 secs 
 
 
-Checksum -- place: f1d2f457fda641a1226b59b98d80fddcb5498067
+Checksum -- place: c556942740fd7507d8f6ac6339a32cbf35d23600
 Writing design to file lab3_ek_impl_1_par.dir/5_1.udb ...
 
 
-Start NBR router at 20:36:38 09/15/25
+Start NBR router at 13:44:42 09/21/25
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -658,7 +651,7 @@ Starting routing resource preassignment
 Preassignment Summary:
 --------------------------------------------------------------------------------
 1 global clock signals routed
-155 connections routed (of 695 total) (22.30%)
+155 connections routed (of 682 total) (22.73%)
 ---------------------------------------------------------
 Clock routing summary:
 Primary clocks (1 used out of 8 available):
@@ -669,45 +662,51 @@ Primary clocks (1 used out of 8 available):
 Completed routing resource preassignment
     TimerIf::skewscore 0
 
-Start NBR section for initial routing at 20:36:39 09/15/25
+Start NBR section for initial routing at 13:44:42 09/21/25
 Level 4, iteration 1
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Routing in Serial Mode ......
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-16(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 151.848ns/0.000ns; real time: 0 secs 
+14(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 152.549ns/0.000ns; real time: 0 secs 
 
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 20:36:39 09/15/25
+Start NBR section for normal routing at 13:44:43 09/21/25
 Level 4, iteration 1
+4(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 152.549ns/0.000ns; real time: 0 secs 
+Level 4, iteration 2
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 152.549ns/0.000ns; real time: 0 secs 
+Level 4, iteration 3
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 151.848ns/0.000ns; real time: 0 secs 
+Estimated worst slack/total negative slack<setup>: 152.549ns/0.000ns; real time: 0 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 20:36:39 09/15/25
+Start NBR section for setup/hold timing optimization with effort level 3 at 13:44:43 09/21/25
 Changing speed to m;   changing temperature to -40
 Changing speed to 6;   changing temperature to 100
 
-Start NBR section for post-routing at 20:36:39 09/15/25
+Start NBR section for post-routing at 13:44:43 09/21/25
 
 End NBR router with 0 unrouted connection(s)
 Changing speed to m;   changing temperature to -40
 Changing speed to 6;   changing temperature to 100
 
-Checksum -- route: ddefb7d8c7387c16497d857452c9559328ecbac
+Checksum -- route: 79c49554706fb4071d0be33a73ac76fa18adb1c8
 
 Total CPU time 1 secs 
 Total REAL time: 0 secs 
 Completely routed.
-End of route.  695 routed (100.00%); 0 unrouted.
+End of route.  682 routed (100.00%); 0 unrouted.
 
 Writing design to file lab3_ek_impl_1_par.dir/5_1.udb ...
 
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Estimated worst slack<setup/<ns>> = 152.146
+PAR_SUMMARY::Estimated worst slack<setup/<ns>> = 153.148
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
 PAR_SUMMARY::Estimated worst slack<hold/<ns>> = 1.743
 PAR_SUMMARY::Timing score<hold/<ns>> = 0.000
@@ -715,9 +714,9 @@ PAR_SUMMARY::Number of errors = 0
 
 Note: user must run 'timing' for timing closure signoff.
 
-Total CPU  Time: 6 secs 
-Total REAL Time: 7 secs 
-Peak Memory Usage: 131.28 MB
+Total CPU  Time: 5 secs 
+Total REAL Time: 6 secs 
+Peak Memory Usage: 129.41 MB
 
 
 par done!
@@ -727,7 +726,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /7 secs 
+Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /6 secs 
 
 timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m   -pwrprd -html -rpt "lab3_ek_impl_1.twr" "lab3_ek_impl_1.udb" 
 timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt lab3_ek_impl_1.twr lab3_ek_impl_1.udb -gui -msgset C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/promote.xml
@@ -744,7 +743,7 @@ Performance Grade:   High-Performance_1.2V
 
 
 
-Successfully loading udb, 0.02 seconds
+Successfully loading udb, 0.03 seconds
 
 Initializing timer
 Starting design annotation....
@@ -752,7 +751,7 @@ High-Performance_1.2V
 
 Starting full timing analysis...
 Performance Hardware Data Status:   Advanced       Version 1.0.
-Connections ignored  38  counted  656  covered  379
+Connections ignored  38  counted  643  covered  366
 Changing speed to m;   changing temperature to -40
 
 STA Runtime and Peak Memory Usage :
@@ -760,7 +759,7 @@ Total CPU Time: 0 secs
 Total REAL Time: 0 secs 
 Peak Memory Usage: 104 MB
 
- 0.642926s wall, 0.500000s user + 0.125000s system = 0.625000s CPU (97.2%)
+ 0.626703s wall, 0.578125s user + 0.046875s system = 0.625000s CPU (99.7%)
 
 
 tmcheck -par "lab3_ek_impl_1.par"  
@@ -812,7 +811,7 @@ INFO <1081100> - Bitstream authenticated.
 Bitstream generation complete!
 
 Total CPU Time: 0 secs 
-Total REAL Time: 2 secs 
+Total REAL Time: 5 secs 
 Peak Memory Usage: 119 MB
 
-Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /2 secs 
+Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /5 secs 

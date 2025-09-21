@@ -6,20 +6,20 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Mon Sep 15 20:36:38 2025
+Sun Sep 21 13:44:42 2025
 
 Pinout by Port Name:
 +--------------+----------+--------------+-------+------------------------------------------+
 | Port Name    | Pin/Bank | Buffer Type  | Site  | Properties                               |
 +--------------+----------+--------------+-------+------------------------------------------+
-| C[0]         | 3/2      | LVCMOS33_OUT | PL10B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| C[0]         | 21/1     | LVCMOS33_OUT | PL19B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | C[1]         | 20/1     | LVCMOS33_OUT | PL20B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| C[2]         | 19/1     | LVCMOS33_OUT | PL22B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| C[3]         | 21/1     | LVCMOS33_OUT | PL19B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| C[2]         | 3/2      | LVCMOS33_OUT | PL10B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| C[3]         | 46/2     | LVCMOS33_OUT | PL6A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | R[0]         | 10/1     | LVCMOS33_IN  | PL17A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
-| R[1]         | 46/2     | LVCMOS33_IN  | PL6A  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
-| R[2]         | 45/2     | LVCMOS33_IN  | PL8B  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
-| R[3]         | 44/2     | LVCMOS33_IN  | PL7B  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| R[1]         | 19/1     | LVCMOS33_IN  | PL22B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| R[2]         | 44/2     | LVCMOS33_IN  | PL7B  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| R[3]         | 45/2     | LVCMOS33_IN  | PL8B  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
 | reset        | 34/0     | LVCMOS33_IN  | PR14B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
 | seg[0]       | 48/2     | LVCMOS33_OUT | PL8A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | seg[1]       | 4/2      | LVCMOS33_OUT | PL10A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
@@ -46,7 +46,7 @@ Pinout by Pin Number:
 | Pin/Bank | Pin Info            | Constraint | Buffer Type  | Site  | Dual Function    |
 +----------+---------------------+------------+--------------+-------+------------------+
 | 2/2      | seg_power[0]        | LOCATED    | LVCMOS33_OUT | PL9A  |                  |
-| 3/2      | C[0]                | LOCATED    | LVCMOS33_OUT | PL10B |                  |
+| 3/2      | C[2]                | LOCATED    | LVCMOS33_OUT | PL10B |                  |
 | 4/2      | seg[1]              | LOCATED    | LVCMOS33_OUT | PL10A |                  |
 | 6/1      | seg[5]              | LOCATED    | LVCMOS33_OUT | PL14B |                  |
 | 9/1      | seg[2]              | LOCATED    | LVCMOS33_OUT | PL16A |                  |
@@ -59,9 +59,9 @@ Pinout by Pin Number:
 | 16/1     |     unused, PULL:UP |            |              | PL25B | SPI_SS           |
 | 17/1     |     unused, PULL:UP |            |              | PL24B | SPI_SI           |
 | 18/1     | seg[3]              | LOCATED    | LVCMOS33_OUT | PL23B |                  |
-| 19/1     | C[2]                | LOCATED    | LVCMOS33_OUT | PL22B |                  |
+| 19/1     | R[1]                | LOCATED    | LVCMOS33_IN  | PL22B |                  |
 | 20/1     | C[1]                | LOCATED    | LVCMOS33_OUT | PL20B | PCLKT1_0         |
-| 21/1     | C[3]                | LOCATED    | LVCMOS33_OUT | PL19B |                  |
+| 21/1     | C[0]                | LOCATED    | LVCMOS33_OUT | PL19B |                  |
 | 23/0     |     unused, PULL:UP |            |              | PR20A |                  |
 | 25/0     |     unused, PULL:UP |            |              | PR20B |                  |
 | 26/0     |     unused, PULL:UP |            |              | PR19A |                  |
@@ -79,9 +79,9 @@ Pinout by Pin Number:
 | 41/0     |                     |            |              | PR7A  | RGB2             |
 | 42/0     |     unused, PULL:UP |            |              | PR9A  |                  |
 | 43/0     |     unused, PULL:UP |            |              | PR10A |                  |
-| 44/2     | R[3]                | LOCATED    | LVCMOS33_IN  | PL7B  | PCLKT2_0         |
-| 45/2     | R[2]                | LOCATED    | LVCMOS33_IN  | PL8B  |                  |
-| 46/2     | R[1]                | LOCATED    | LVCMOS33_IN  | PL6A  |                  |
+| 44/2     | R[2]                | LOCATED    | LVCMOS33_IN  | PL7B  | PCLKT2_0         |
+| 45/2     | R[3]                | LOCATED    | LVCMOS33_IN  | PL8B  |                  |
+| 46/2     | C[3]                | LOCATED    | LVCMOS33_OUT | PL6A  |                  |
 | 47/2     | seg_power[1]        | LOCATED    | LVCMOS33_OUT | PL7A  |                  |
 | 48/2     | seg[0]              | LOCATED    | LVCMOS33_OUT | PL8A  |                  |
 | PL6B/2   |     unused, PULL:UP |            |              | PL6B  |                  |
@@ -106,14 +106,14 @@ Pinout by Pin Number:
 
 Locate Constraints for each Pin: 
 
-ldc_set_location -site {3} [ get_ports {C[0]} ]
+ldc_set_location -site {21} [ get_ports {C[0]} ]
 ldc_set_location -site {20} [ get_ports {C[1]} ]
-ldc_set_location -site {19} [ get_ports {C[2]} ]
-ldc_set_location -site {21} [ get_ports {C[3]} ]
+ldc_set_location -site {3} [ get_ports {C[2]} ]
+ldc_set_location -site {46} [ get_ports {C[3]} ]
 ldc_set_location -site {10} [ get_ports {R[0]} ]
-ldc_set_location -site {46} [ get_ports {R[1]} ]
-ldc_set_location -site {45} [ get_ports {R[2]} ]
-ldc_set_location -site {44} [ get_ports {R[3]} ]
+ldc_set_location -site {19} [ get_ports {R[1]} ]
+ldc_set_location -site {44} [ get_ports {R[2]} ]
+ldc_set_location -site {45} [ get_ports {R[3]} ]
 ldc_set_location -site {34} [ get_ports {reset} ]
 ldc_set_location -site {48} [ get_ports {seg[0]} ]
 ldc_set_location -site {4} [ get_ports {seg[1]} ]
@@ -131,5 +131,5 @@ ldc_set_location -site {47} [ get_ports {seg_power[1]} ]
 
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
 
-Mon Sep 15 20:36:38 2025
+Sun Sep 21 13:44:42 2025
 

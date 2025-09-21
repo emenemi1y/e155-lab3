@@ -8,7 +8,7 @@ I/O cells:      18
                             FD1P3XZ        67          100.0
                               HSOSC         1          100.0
                                  IB         5          100.0
-                               LUT4       109          100.0
+                               LUT4       104          100.0
                                  OB        13          100.0
 SUB MODULES
                             counter         1
@@ -17,7 +17,7 @@ SUB MODULES
                          numberbank         1
                             scanner         1
                              sevseg         1
-                              TOTAL       227
+                              TOTAL       222
 ----------------------------------------------------------------------
 Report for cell counter_U0.v1
 Instance Path : counter2
@@ -25,31 +25,31 @@ Instance Path : counter2
                                cell     count   Res Usage(%)
                                 FA2        13           50.0
                             FD1P3XZ        25           37.3
-                               LUT4        10            9.2
-                              TOTAL        48
+                               LUT4         9            8.7
+                              TOTAL        47
+----------------------------------------------------------------------
+Report for cell sevseg.v1
+Instance Path : sevseg_logic
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7            6.7
+                              TOTAL         7
 ----------------------------------------------------------------------
 Report for cell scanner.v1
 Instance Path : scanner1
                                   Cell usage:
                                cell     count   Res Usage(%)
                             FD1P3XZ         9           13.4
-                               LUT4        20           18.3
-                              TOTAL        29
-----------------------------------------------------------------------
-Report for cell sevseg.v1
-Instance Path : sevseg_logic
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         7            6.4
-                              TOTAL         7
+                               LUT4        30           28.8
+                              TOTAL        39
 ----------------------------------------------------------------------
 Report for cell numberbank.v1
 Instance Path : bank
                                   Cell usage:
                                cell     count   Res Usage(%)
                             FD1P3XZ         3            4.5
-                               LUT4        44           40.4
-                              TOTAL        47
+                               LUT4        42           40.4
+                              TOTAL        45
 ----------------------------------------------------------------------
 Report for cell debounce.v1
 Instance Path : debouncer
@@ -57,10 +57,10 @@ Instance Path : debouncer
                                cell     count   Res Usage(%)
                                 FA2        13           50.0
                             FD1P3XZ        26           38.8
-                               LUT4        12           11.0
+                               LUT4        11           10.6
 SUB MODULES
                             counter         1
-                              TOTAL        52
+                              TOTAL        51
 ----------------------------------------------------------------------
 Report for cell counter.v1
 Instance Path : debouncer.debounce_counter
@@ -68,5 +68,5 @@ Instance Path : debouncer.debounce_counter
                                cell     count   Res Usage(%)
                                 FA2        13           50.0
                             FD1P3XZ        25           37.3
-                               LUT4        12           11.0
-                              TOTAL        50
+                               LUT4        11           10.6
+                              TOTAL        49

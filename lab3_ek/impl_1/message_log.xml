@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="Export">
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
+    </Task>
     <Task name="Synthesis">
         <Message>
             <ID>35935050</ID>
@@ -385,9 +392,9 @@
         <Message>
             <ID>35901899</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(111): </Dynamic>
+            <Dynamic>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(147): </Dynamic>
             <Navigation>c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv</Navigation>
-            <Navigation>111</Navigation>
+            <Navigation>147</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -427,11 +434,6 @@
             <Severity>256</Severity>
             <Dynamic>\bank/state_FSM</Dynamic>
             <Dynamic>3</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001783</ID>
-            <Severity>256</Severity>
-            <Dynamic>key_press_I_0</Dynamic>
         </Message>
         <Message>
             <ID>35001783</ID>
@@ -492,13 +494,6 @@
             <ID>35001783</ID>
             <Severity>256</Severity>
             <Dynamic>\bank/new_number_3__I_0</Dynamic>
-        </Message>
-    </Task>
-    <Task name="Export">
-        <Message>
-            <ID>1081100</ID>
-            <Severity>1</Severity>
-            <Dynamic>Bitstream authenticated.</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

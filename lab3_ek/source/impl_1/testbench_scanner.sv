@@ -6,7 +6,6 @@ Testbench for the scanner module
 */
 
 module testbench_scanner();
-	
 	logic clk, reset;
 	logic [3:0] R, C, R_press;
 	logic key_pressed;

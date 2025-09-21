@@ -8,7 +8,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.2.0.3.0
-Mapped on: Mon Sep 15 20:36:28 2025
+Mapped on: Sun Sep 21 13:44:29 2025
 
 Design Information
 ------------------
@@ -24,8 +24,8 @@ Design Summary
 
    Number of slice registers:  67 out of  5280 (1%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:           168 out of  5280 (3%)
-      Number of logic LUT4s:             110
+   Number of LUT4s:           163 out of  5280 (3%)
+      Number of logic LUT4s:             105
       Number of inserted feedthru LUT4s:   5
       Number of replicated LUT4s:          1
       Number of ripple logic:             26 (52 LUT4s)
@@ -57,8 +57,8 @@ Design Summary
       Net VCC_net: 1 loads, 0 SLICEs
    Number of LSRs:  3
       Net n4: 17 loads, 17 SLICEs
-      Net n329: 13 loads, 13 SLICEs
-      Net debouncer.debounce_counter.n333: 13 loads, 13 SLICEs
+      Net counter2.n335: 13 loads, 13 SLICEs
+      Net debouncer.debounce_counter.n338: 13 loads, 13 SLICEs
    Top 10 highest fanout non-clock nets:
 
                                     Page 1
@@ -70,15 +70,15 @@ Design Summary
 Design Summary (cont)
 ---------------------
       Net n4: 17 loads
-      Net C_c_3_N_78[8]: 15 loads
-      Net debouncer.debounce_counter.n333: 13 loads
-      Net n329: 13 loads
-      Net C_c_3_N_78[3]: 11 loads
-      Net R_press[1]: 11 loads
-      Net C_c_3_N_78[7]: 10 loads
-      Net R_press[0]: 10 loads
-      Net R_press[2]: 10 loads
-      Net C_c_1: 9 loads
+      Net scanner1.n19: 14 loads
+      Net counter2.n335: 13 loads
+      Net C_c_3_N_78[8]: 13 loads
+      Net debouncer.debounce_counter.n338: 13 loads
+      Net debounce_done: 12 loads
+      Net C_c_2: 11 loads
+      Net C_c_3: 11 loads
+      Net C_c_3_N_78[5]: 10 loads
+      Net R_press[1]: 10 loads
 
 
 
@@ -179,7 +179,7 @@ Run Time and Memory Usage
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 68 MB
-Checksum -- map: ae2109c13c34c752cba4ce64f8d93e6ab312918
+Checksum -- map: 8b52313d86f4e88710ee367aa04e577db58ebfb4
 
 
 
