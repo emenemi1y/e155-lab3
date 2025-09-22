@@ -8,7 +8,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.2.0.3.0
-Mapped on: Sun Sep 21 13:44:29 2025
+Mapped on: Sun Sep 21 16:50:15 2025
 
 Design Information
 ------------------
@@ -22,13 +22,13 @@ Command line:   map -pdc
 Design Summary
 --------------
 
-   Number of slice registers:  67 out of  5280 (1%)
+   Number of slice registers:  98 out of  5280 (2%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:           163 out of  5280 (3%)
-      Number of logic LUT4s:             105
-      Number of inserted feedthru LUT4s:   5
+   Number of LUT4s:           206 out of  5280 (4%)
+      Number of logic LUT4s:             118
+      Number of inserted feedthru LUT4s:   9
       Number of replicated LUT4s:          1
-      Number of ripple logic:             26 (52 LUT4s)
+      Number of ripple logic:             39 (78 LUT4s)
    Number of IO sites used:   18 out of 39 (46%)
       Number of IO sites used for general PIO: 18
       Number of IO sites used for I3C: 0 out of 2 (0%)
@@ -50,16 +50,16 @@ Design Summary
    Number of SPIs:             0 out of 2 (0%)
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
-   Number of Clocks:  1
-      Net clk: 45 loads, 45 rising, 0 falling (Driver: Pin
+   Number of Clocks:  2
+      Net clk: 56 loads, 56 rising, 0 falling (Driver: Pin
      hf_osc.osc_inst/CLKHF)
-   Number of Clock Enables:  1
+      Net scanner_clk: 9 loads, 9 rising, 0 falling (Driver: Pin
+     counter1.new_clk/Q)
+   Number of Clock Enables:  2
       Net VCC_net: 1 loads, 0 SLICEs
-   Number of LSRs:  3
-      Net n4: 17 loads, 17 SLICEs
-      Net counter2.n335: 13 loads, 13 SLICEs
-      Net debouncer.debounce_counter.n338: 13 loads, 13 SLICEs
-   Top 10 highest fanout non-clock nets:
+      Net bank.n302: 8 loads, 8 SLICEs
+   Number of LSRs:  8
+      Net n4: 15 loads, 15 SLICEs
 
                                     Page 1
 
@@ -69,16 +69,24 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net n4: 17 loads
-      Net scanner1.n19: 14 loads
-      Net counter2.n335: 13 loads
-      Net C_c_3_N_78[8]: 13 loads
-      Net debouncer.debounce_counter.n338: 13 loads
+      Net counter2.n297: 13 loads, 13 SLICEs
+      Net counter1.n294: 13 loads, 13 SLICEs
+      Net bank.n657: 1 loads, 1 SLICEs
+      Net bank.n658: 1 loads, 1 SLICEs
+      Net bank.n659: 1 loads, 1 SLICEs
+      Net bank.n660: 1 loads, 1 SLICEs
+      Net debouncer.debounce_counter.n305: 13 loads, 13 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net scanner1.n19: 18 loads
+      Net n4: 15 loads
+      Net counter1.n294: 13 loads
+      Net counter2.n297: 13 loads
+      Net debouncer.debounce_counter.n305: 13 loads
+      Net bank.n11_adj_134: 12 loads
+      Net bank.n302: 12 loads
       Net debounce_done: 12 loads
-      Net C_c_2: 11 loads
-      Net C_c_3: 11 loads
-      Net C_c_3_N_78[5]: 10 loads
-      Net R_press[1]: 10 loads
+      Net n14_adj_144: 11 loads
+      Net bank.n11: 9 loads
 
 
 
@@ -119,14 +127,6 @@ IO (PIO) Attributes
 | seg[1]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | seg[2]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| seg[3]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| seg[4]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| seg[5]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| seg[6]              | OUTPUT    |           |       |       |           |
 
                                     Page 2
 
@@ -136,6 +136,14 @@ IO (PIO) Attributes
 
 IO (PIO) Attributes (cont)
 --------------------------
++---------------------+-----------+-----------+-------+-------+-----------+
+| seg[3]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| seg[4]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| seg[5]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| seg[6]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | C[0]                | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -178,16 +186,8 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 68 MB
-Checksum -- map: 8b52313d86f4e88710ee367aa04e577db58ebfb4
-
-
-
-
-
-
-
-
+   Peak Memory Usage: 69 MB
+Checksum -- map: 322f45db3861651325d1345fb91a7f46da80dcb
 
 
 

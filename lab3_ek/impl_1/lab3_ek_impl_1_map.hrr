@@ -3,68 +3,78 @@ Report for cell top
    Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        163        100.0
-                               LUTGATE	        111        100.0
-                                LUTCCU	         52        100.0
+                                  LUT4	        206        100.0
+                               LUTGATE	        128        100.0
+                                LUTCCU	         78        100.0
                                  IOBUF	         18        100.0
-                                PFUREG	         67        100.0
+                                PFUREG	         98        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                            counter_U0	          1        21.5
-                              debounce	          1        22.7
-                            numberbank	          1        25.2
-                               scanner	          1        18.4
-                                sevseg	          1         4.3
+                            counter_U0	          1        17.0
+                            counter_U1	          1        17.5
+                              debounce	          1        17.5
+                            numberbank	          1        18.4
+                               scanner	          1        14.1
+                                sevseg	          1         3.4
 ---------------------------------------------------
 Report for cell counter_U0
    Instance path: top/counter2
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         35        21.5
-                               LUTGATE	          9         8.1
-                                LUTCCU	         26        50.0
-                                PFUREG	         25        37.3
+                                  LUT4	         35        17.0
+                               LUTGATE	          9         7.0
+                                LUTCCU	         26        33.3
+                                PFUREG	         25        25.5
 ---------------------------------------------------
-Report for cell sevseg
-   Instance path: top/sevseg_logic
+Report for cell counter_U1
+   Instance path: top/counter1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          7         4.3
-                               LUTGATE	          7         6.3
----------------------------------------------------
-Report for cell scanner
-   Instance path: top/scanner1
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	         30        18.4
-                               LUTGATE	         30        27.0
-                                PFUREG	          9        13.4
+                                  LUT4	         36        17.5
+                               LUTGATE	         10         7.8
+                                LUTCCU	         26        33.3
+                                PFUREG	         25        25.5
 ---------------------------------------------------
 Report for cell numberbank
    Instance path: top/bank
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         41        25.2
-                               LUTGATE	         41        36.9
-                                PFUREG	          3         4.5
+                                  LUT4	         38        18.4
+                               LUTGATE	         38        29.7
+                                PFUREG	          9         9.2
+---------------------------------------------------
+Report for cell scanner
+   Instance path: top/scanner1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         29        14.1
+                               LUTGATE	         29        22.7
+                                PFUREG	          9         9.2
 ---------------------------------------------------
 Report for cell debounce
    Instance path: top/debouncer
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         37        22.7
-                               LUTGATE	         11         9.9
-                                LUTCCU	         26        50.0
-                                PFUREG	         26        38.8
+                                  LUT4	         36        17.5
+                               LUTGATE	         10         7.8
+                                LUTCCU	         26        33.3
+                                PFUREG	         26        26.5
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                               counter	          1        22.7
+                               counter	          1        17.5
 ---------------------------------------------------
 Report for cell counter
    Instance path: top/debouncer/debounce_counter
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         37        22.7
-                               LUTGATE	         11         9.9
-                                LUTCCU	         26        50.0
-                                PFUREG	         25        37.3
+                                  LUT4	         36        17.5
+                               LUTGATE	         10         7.8
+                                LUTCCU	         26        33.3
+                                PFUREG	         25        25.5
+---------------------------------------------------
+Report for cell sevseg
+   Instance path: top/sevseg_logic
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         3.4
+                               LUTGATE	          7         5.5

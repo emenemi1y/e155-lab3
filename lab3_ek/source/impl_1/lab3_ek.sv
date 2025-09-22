@@ -40,11 +40,12 @@ module top(input logic reset,
 	
 	// instantiate modules 
 	sevseg sevseg_logic(s, seg);
+	counter counter1(clk, reset, SCANNER_CYCLES, scanner_clk);
 	counter counter2(clk, reset, SEVSEG_CYCLES, sel);
 	
 	debounce debouncer(clk, reset, BOUNCE_CYCLE_WAIT, debounce, debounce_done);
 	
-	scanner scanner1(clk, reset, sync_R, BOUNCE_CYCLE_WAIT, debounce_done, C, R_press, key_press, debounce);
+	scanner scanner1(scanner_clk, reset, sync_R, debounce_done, C, R_press, key_press, debounce);
 	numberbank bank(clk, reset, R_press, C, key_press, s1, s2);
 
 	

@@ -17,6 +17,7 @@ module numberbank(
 	// define states
 	typedef enum logic [1:0] {hold, update, stall} statetype;
 	statetype state, nextstate;
+	logic updated;
 	
 	
 	logic [3:0] new_number;
@@ -43,36 +44,64 @@ module numberbank(
 			{4'b1000, 4'b0100}:   new_number = 4'b1111;
 			{4'b1000, 4'b0100}:   new_number = 4'b1101;*/
 			
-			{4'b1000, 4'b0001}:   new_number = 4'b0001;
-			{4'b1000, 4'b0010}:   new_number = 4'b0010;
-			{4'b1000, 4'b0100}:   new_number = 4'b0011;
-			{4'b0001, 4'b0001}:   new_number = 4'b1010;
+			{4'b0111, 4'b1110}:   new_number = 4'b0001;
+			{4'b0111, 4'b1101}:   new_number = 4'b0010;
+			{4'b0111, 4'b1011}:   new_number = 4'b0011;
+			{4'b1110, 4'b1110}:   new_number = 4'b1010;
 			
-			{4'b0100, 4'b0001}:   new_number = 4'b0100;
-			{4'b0100, 4'b0010}:   new_number = 4'b0101;
-			{4'b0100, 4'b0100}:   new_number = 4'b0110;
-			{4'b0001, 4'b0100}:   new_number = 4'b1011;
+			{4'b1011, 4'b1110}:   new_number = 4'b0100;
+			{4'b1011, 4'b1101}:   new_number = 4'b0101;
+			{4'b1011, 4'b1011}:   new_number = 4'b0110;
+			{4'b1110, 4'b1011}:   new_number = 4'b1011;
 			
-			{4'b0010, 4'b1000}:   new_number = 4'b0111;
-			{4'b0010, 4'b0010}:   new_number = 4'b1000;
-			{4'b0010, 4'b0100}:   new_number = 4'b1001;
-			{4'b0001, 4'b0001}:   new_number = 4'b1100;
+			{4'b1101, 4'b0111}:   new_number = 4'b0111;
+			{4'b1101, 4'b1101}:   new_number = 4'b1000;
+			{4'b1101, 4'b1011}:   new_number = 4'b1001;
+			{4'b1110, 4'b1110}:   new_number = 4'b1100;
 			
-			{4'b0100, 4'b1000}:   new_number = 4'b1110;
-			{4'b0001, 4'b0010}:   new_number = 4'b0000;
-			{4'b0001, 4'b1000}:   new_number = 4'b1111;
-			{4'b0100, 4'b1000}:   new_number = 4'b1101;
+			{4'b1011, 4'b0111}:   new_number = 4'b1110;
+			{4'b1110, 4'b1101}:   new_number = 4'b0000;
+			{4'b1110, 4'b0111}:   new_number = 4'b1111;
+			{4'b1011, 4'b0111}:   new_number = 4'b1101;
 			
 			default:              new_number = 4'b0000;
 		endcase
 	end
 	
+	always_ff @(posedge clk)
+		if (~reset) begin
+			if (key_press) begin
+				if (~updated) begin
+					s2 = s1;
+					s1 = new_number;
+					updated = 1'b1;
+				end
+				else begin
+					s1 = s1;
+					s2 = s2;
+					updated = 1'b1;
+				end
+			end
+			else begin
+				s1 = s1;
+				s2 = s2;
+				updated = 1'b0;
+			end
+		end
+		else begin
+			updated = 1'b0;
+			s1 = s1;
+			s2 = s2;
+		end
+		
+	
 	// update state 
+	/*
 	always_ff @(posedge clk)
 	if (~reset) state <= hold;
 	else 	   state <= nextstate;
 		
-	// next state logic 
+	// next state logic
 	always_comb begin
 		case(state)
 			hold:	if (key_press) nextstate = update;
@@ -95,6 +124,7 @@ module numberbank(
 			s1 = new_number;
 		end
 	end
+	*/
 			
 
 endmodule

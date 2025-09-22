@@ -1,8 +1,9 @@
 m255
 K4
 z2
-Z0 !s12c _opt1
-Z1 !s99 nomlopt
+!s12c _opt2
+Z0 !s99 nomlopt
+Z1 !s12c _opt1
 R0
 R1
 R0
@@ -25,12 +26,13 @@ R0
 R1
 R0
 R1
+R0
 Z2 !s12c _opt
-R1
+R0
 R2
-R1
+R0
 R2
-R1
+R0
 !s11f vlog 2024.2 2024.05, May 20 2024
 13
 !s112 1.1
@@ -44,7 +46,7 @@ T_opt
 VAeBi9?3okJk7iW0oWOF`;2
 04 17 4 work testbench_scanner fast 0
 =1-00be43e57197-68c639cc-38f-8b28
-R1
+R0
 Z4 !s12f OEM25U2 
 Z5 !s12b OEM100
 Z6 !s124 OEM100
@@ -59,7 +61,7 @@ T_opt1
 V>beE5Q=Yo4<e>iM5]Hhz^3
 04 20 4 work testbench_numberbank fast 0
 =3-00be43e57197-68c7248a-9e-8ecc
-R1
+R0
 R4
 R5
 R6
@@ -68,26 +70,41 @@ R8
 R9
 n@_opt1
 R10
+R3
+T_opt2
+!s110 1758499710
+V<a7BKFHU@Scib3UT1`k5a3
+04 10 4 work numberbank fast 0
+=1-00be43eaeb5f-68d0937e-87-4290
+R0
+!s12f OEM25U1 
+R5
+R6
+R7
+R8
+R9
+n@_opt2
+R10
 vcounter
 2C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/counter.sv
 Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z12 !s110 1757881475
+Z12 !s110 1758499686
 !i10b 1
-!s100 XOLR=jE?k>b6AhAe;aU6m1
-I`glfEd9>7XNZmIVjLlLK53
+!s100 hF[3PCF8z3;08C?8hM[C72
+IQU[9ec2`8``QP6O^5]SlJ0
 S1
 Z13 dC:/Users/ekendrick/Documents/GitHub/e155-lab3
-Z14 w1757816922
+Z14 w1758493338
 8C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/counter.sv
 FC:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/counter.sv
-!i122 249
+!i122 258
 L0 9 24
 Z15 VDg1SIo80bB@j0V0VzS_@n1
 Z16 OL;L;2024.2;79
 r1
 !s85 0
 31
-Z17 !s108 1757881475.000000
+Z17 !s108 1758499686.000000
 !s107 C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/counter.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/counter.sv|
 !i113 0
@@ -98,15 +115,15 @@ vnumberbank
 R11
 R12
 !i10b 1
-!s100 CJ7_bH<6BI?0A^^7dAgk43
-IBTQ@Ej<_;ziU2Y:aBcCmF2
+!s100 5>Hn<j]lXn7G2MB:g5Wc23
+IIhRZdFBGISJGC?jnh=L?51
 S1
 R13
-w1757881160
+w1758499308
 8C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/numberbank.sv
 FC:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/numberbank.sv
-!i122 251
-L0 9 69
+!i122 260
+L0 9 122
 R15
 R16
 r1
@@ -123,15 +140,15 @@ vscanner
 R11
 R12
 !i10b 1
-!s100 00EM:aHBCL9^H_h:h1_d31
-I=AJhl8HZ2d`8eQibKd<;D1
+!s100 :VPY]UO8mOT@zFzdoMRSI0
+IhR[zQ36d?j8oRYM?2IaLV2
 S1
 R13
-w1757820030
+w1758498594
 8C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/scanner.sv
 FC:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/scanner.sv
-!i122 252
-L0 10 122
+!i122 261
+L0 10 168
 R15
 R16
 r1
@@ -155,7 +172,7 @@ R13
 R14
 8C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/sevseg.sv
 FC:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/sevseg.sv
-!i122 253
+!i122 262
 L0 9 28
 R15
 R16
@@ -180,7 +197,7 @@ R13
 R14
 8C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_counter.sv
 FC:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_counter.sv
-!i122 254
+!i122 263
 L0 8 24
 R15
 R16
@@ -202,11 +219,11 @@ R12
 IQV]_NIZ?JNCF;4TdPC4U33
 S1
 R13
-w1757881471
+R14
 8C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv
 FC:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv
-!i122 257
-Z19 L0 8 44
+!i122 266
+L0 8 44
 R15
 R16
 r1
@@ -223,15 +240,15 @@ vtestbench_scanner
 R11
 R12
 !i10b 1
-!s100 S1Bac0JE4_P;`KARmVh4V0
-IJ77Ul6T`ecSe=<Z9NlnC21
+!s100 z:2WFlZimSLMkfO7Sn^Zd0
+IEY[Ga13KcYLekPNTMQP8z0
 S1
 R13
-w1757821318
+R14
 8C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv
 FC:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv
-!i122 255
-R19
+!i122 264
+L0 8 43
 R15
 R16
 r1
@@ -255,7 +272,7 @@ R13
 R14
 8C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_sevseg.sv
 FC:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_sevseg.sv
-!i122 256
+!i122 265
 L0 8 36
 R15
 R16
@@ -273,15 +290,15 @@ vtop
 R11
 R12
 !i10b 1
-!s100 L2A64SF``Z:KGQ6BE7dhE0
-IlkTPekM6]S__SLYh2>MeX2
+!s100 gGd2X;MKcdIl12ma_d3g13
+I@0Y7A@B=<32fZYi>Eok8k1
 S1
 R13
-w1757881100
+w1758496208
 8C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv
 FC:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv
-!i122 250
-L0 9 46
+!i122 259
+L0 9 53
 R15
 R16
 r1

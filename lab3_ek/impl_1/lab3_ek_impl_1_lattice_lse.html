@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Sep 21 13:44:08 2025
+Sun Sep 21 16:49:54 2025
 
 
 Command Line:  C:\lscc\radiant\2024.2\ispfpga\bin\nt64\synthesis.exe -f C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/impl_1/lab3_ek_impl_1_lattice.synproj -logfile lab3_ek_impl_1_lattice.srp -gui -msgset C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/promote.xml 
@@ -231,9 +231,7 @@ INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_
 INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/counter.sv(9): compiling module counter. VERI-1018
 INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/debounce.sv(9): compiling module debounce. VERI-1018
 INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(10): compiling module scanner. VERI-1018
-WARNING <35901899> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/scanner.sv(147): behavior inside always_comb block does not represent combinational logic. VERI-1899
 INFO <35901018> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(9): compiling module numberbank. VERI-1018
-WARNING <35901899> - synthesis: c:/users/ekendrick/documents/github/e155-lab3/lab3_ek/source/impl_1/numberbank.sv(97): behavior inside always_comb block does not represent combinational logic. VERI-1899
 
 <A name="lse_parameter"></A><B><U><big>Parameter Setting</big></U></B>
 
@@ -285,149 +283,48 @@ original encoding -> new encoding (one-hot encoding)
 
  1000 -> 100000000
 
-INFO <35001774> - synthesis: Extracted state machine for register '\bank/state' with one-hot encoding
-State machine has 3 reachable states with original encodings of:
-
- 00 
-
- 01 
-
- 10 
-
-original encoding -> new encoding (one-hot encoding)
-
- 00 -> 001
-
- 01 -> 010
-
- 10 -> 100
-
 
 
 
 CRITICAL <35001747> - synthesis: Bit(s) of register \scanner1/state_FSM stuck at '0': 15, 14, 13, 12, 11, 10, 9
-CRITICAL <35001747> - synthesis: Bit(s) of register \bank/state_FSM stuck at '0': 3
-Combinational loop due to latch found: 1
-
-	Instance R_press_0__I_0 
-
-	Net R_press[0] 
-
-Combinational loop due to latch found: 2
-
-	Instance s1_0__I_0 
-
-	Net s2[0] 
-
-Combinational loop due to latch found: 3
-
-	Instance \bank/new_number_0__I_0 
-
-	Net s1[0] 
-
-Combinational loop due to latch found: 4
-
-	Instance R_press_1__I_0 
-
-	Net R_press[1] 
-
-Combinational loop due to latch found: 5
-
-	Instance R_press_2__I_0 
-
-	Net R_press[2] 
-
-Combinational loop due to latch found: 6
-
-	Instance R_press_3__I_0 
-
-	Net R_press[3] 
-
-Combinational loop due to latch found: 7
-
-	Instance s1_1__I_0 
-
-	Net s2[1] 
-
-Combinational loop due to latch found: 8
-
-	Instance s1_2__I_0 
-
-	Net s2[2] 
-
-Combinational loop due to latch found: 9
-
-	Instance s1_3__I_0 
-
-	Net s2[3] 
-
-Combinational loop due to latch found: 10
-
-	Instance \bank/new_number_1__I_0 
-
-	Net s1[1] 
-
-Combinational loop due to latch found: 11
-
-	Instance \bank/new_number_2__I_0 
-
-	Net s1[2] 
-
-Combinational loop due to latch found: 12
-
-	Instance \bank/new_number_3__I_0 
-
-	Net s1[3] 
-
-CRITICAL <35001783> - synthesis: Mapping latch R_press_0__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch s1_0__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch \bank/new_number_0__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch R_press_1__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch R_press_2__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch R_press_3__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch s1_1__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch s1_2__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch s1_3__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch \bank/new_number_1__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch \bank/new_number_2__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch \bank/new_number_3__I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
 
 
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (top)######################
-Number of register bits => 67 of 5280 (1 % )
-CCU2 => 26
-FD1P3XZ => 67
+Number of register bits => 98 of 5280 (1 % )
+CCU2 => 39
+FD1P3XZ => 98
 HSOSC => 1
 IB => 5
-LUT4 => 104
+LUT4 => 117
 OB => 13
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
-Number of even-length carry chains : 2
+Number of even-length carry chains : 3
 
 
 <A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 1
+Number of Clocks: 2
   Net : clk, loads : 0
+  Net : counter1/scanner_clk, loads : 1
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : debouncer/debounce_counter/n338, loads : 33
-  Net : counter2/n335, loads : 32
-  Net : debouncer/debounce_counter/n4, loads : 16
-  Net : scanner1/n19, loads : 16
-  Net : counter2/n1369, loads : 14
-  Net : counter2/n101[23], loads : 14
-  Net : debouncer/debounce_counter/n1394, loads : 14
-  Net : debouncer/debounce_counter/n101[23], loads : 14
-  Net : counter2/n1367, loads : 13
-  Net : counter2/n101[21], loads : 13
+  Net : counter1/n294, loads : 33
+  Net : counter2/n297, loads : 32
+  Net : debouncer/debounce_counter/n305, loads : 31
+  Net : bank/n658, loads : 27
+  Net : bank/n659, loads : 27
+  Net : bank/new_number_2__N_71, loads : 25
+  Net : bank/n5, loads : 24
+  Net : bank/n7_adj_133, loads : 24
+  Net : bank/n599, loads : 24
+  Net : bank/n660, loads : 22
 ################### End Clock Report ##################
 
 
@@ -445,7 +342,7 @@ Peak Memory Usage: 95 MB
 Total CPU Time: 5 secs 
 Total REAL Time: 12 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 7425a8285e2072d4c6cc17d38e43b606a9ac2cd
+Checksum -- synthesis -- netlist: 217dae0db2b69f3a6da3528fc8790c4e4bb6b5a0
 
 
 

@@ -10,7 +10,6 @@ column powered until released.
 module scanner (input logic clk, 
 				input logic reset,
 				input logic [3:0] R,
-				input logic [23:0] bounce_cycle_wait,
 				input logic debounce_done,
 				output logic [3:0] C,
 				output logic [3:0] R_press,
@@ -32,28 +31,30 @@ module scanner (input logic clk,
 						nextstate = S1;
 						key_press = 1'b0;
 						debounce  = 1'b0;
-						R_press   = R_press; end
+						R_press   = 4'b0000; end
 					else begin 
 						nextstate = S4;
 						key_press = 1'b1;
 						R_press   = R; 
 						debounce  = 1'b1; end 
+						
+			
 			S1: 	if (R == 4'b0000) begin
 						nextstate = S2;
 						key_press = 1'b0;
 						debounce  = 1'b0;
-						R_press   = R_press; end
+						R_press   = 4'b0000; end
 					else begin 
 						nextstate = S5;
 						key_press = 1'b1;
 						R_press   = R; 
 						debounce  = 1'b1; end
-						
+											
 			S2: 	if (R == 4'b0000) begin
 						nextstate = S3;
 						key_press = 1'b0; 
 						debounce  = 1'b0;
-						R_press   = R_press; end
+						R_press   = 4'b0000; end
 					else begin 
 						nextstate = S6;
 						key_press = 1'b1;
@@ -64,85 +65,99 @@ module scanner (input logic clk,
 						nextstate = S0;
 						key_press = 1'b0; 
 						debounce  = 1'b0;
-						R_press   = R_press; end
+						R_press   = 4'b0000; end
 					else begin 
 						nextstate = S7;
 						key_press = 1'b1;
-						R_press   = R; 
+						R_press   = 4'b0000; 
 						debounce  = 1'b1; end
-						
+			
+			
 			S4: 	if (~debounce_done) begin nextstate = S4;
 						debounce = 1'b1;
 						key_press = 1'b1;
-						R_press = R_press; end
+						R_press = 4'b0000; end
 					else begin
 						debounce = 1'b0;
 						if (R == 4'b0000) begin
 							nextstate = S1;
-							key_press = 1'b0; end
-						else begin nextstate = S4;
+							key_press = 1'b0;
+							R_press = 4'b0000; end
+						else begin 
+							nextstate = S4;
 							key_press = 1'b1;
-							R_press = R_press;
+							R_press = 4'b0000;
 							end
 					end
+					
+			
 
 			S5:    	if (~debounce_done) begin nextstate = S5;
 						debounce = 1'b1;
 						key_press = 1'b1;
-						R_press = R_press; end
+						R_press = 4'b0000; end
 					else begin
 						debounce = 1'b0;
 						if (R == 4'b0000) begin
 							nextstate = S2;
-							key_press = 1'b0; end
-						else begin nextstate = S5; 
+							key_press = 1'b0; 
+							R_press = 4'b0000; end
+						else begin 
+							nextstate = S5; 
 							key_press = 1'b1;
-							R_press = R_press;
+							R_press = 4'b0000;
 							end
 					end
 					
+				
 			S6:    	if (~debounce_done) begin nextstate = S6;
 						debounce = 1'b1;
 						key_press = 1'b1;
-						R_press = R_press; end
+						R_press = 4'b0000; end
 					else begin
 						debounce = 1'b0;
 						if (R == 4'b0000) begin
 							nextstate = S3;
-							key_press = 1'b0; end
-						else begin nextstate = S6; 
+							key_press = 1'b0; 
+							R_press = 4'b0000; end
+						else begin 
+							nextstate = S6; 
 							key_press = 1'b1;
-							R_press = R_press;
+							R_press = 4'b0000;
 							end
 					end
 					
 			S7: 	if (~debounce_done) begin nextstate = S7;
 						debounce = 1'b1;
 						key_press = 1'b1;
-						R_press = R_press; end
+						R_press = 4'b0000; end
 					else begin 
 						debounce = 1'b0;
 						if (R == 4'b0000) begin
 							nextstate = S0;
-							key_press = 1'b0; end
-						else begin nextstate = S7;
+							key_press = 1'b0; 
+							R_press = 4'b0000;
+							end
+						else begin 
+							nextstate = S7;
 							key_press = 1'b1;
-							R_press = R_press;
+							R_press = 4'b0000;
 							end
 					end
-						
-			S8:		begin nextstate = S0;
-					key_press = 1'b0;
-					R_press = R_press;
-					debounce = 1'b0; end
-						
-						
-											
-			default:	begin  nextstate = S8;
-				key_press = 1'b1; 
-				R_press = 4'b0001; 
-				debounce = 1'b0; end
 				
+			S8:		begin 
+					nextstate = S0;
+					key_press = 1'b0;
+					R_press = 4'b0000;
+					debounce = 1'b0; 
+					end
+			
+											
+			default:	
+				begin  nextstate = S8;
+					key_press = 1'b1; 
+					R_press = 4'b0001; 
+					debounce = 1'b0; end
 			
 		endcase
 	
@@ -151,10 +166,10 @@ module scanner (input logic clk,
 		if (state == S8) begin
 			C = 4'b0100; end
 		else begin
-			C[0] = (state == S0) || (state == S4);
-			C[1] = (state == S1) || (state == S5);
-			C[2] = (state == S2) || (state == S6);
-			C[3] = (state == S3) || (state == S7);
+			C[0] = ~(state == S0) || (state == S4);
+			C[1] = ~(state == S1) || (state == S5);
+			C[2] = ~(state == S2) || (state == S6);
+			C[3] = ~(state == S3) || (state == S7);
 		end
 	end
 		
