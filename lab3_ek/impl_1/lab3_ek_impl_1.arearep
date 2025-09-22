@@ -1,14 +1,14 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  98 of 5280 (1.856%)
+Register bits:  102 of 5280 (1.932%)
 I/O cells:      18
                                   Cell usage:
                                cell     count   Res Usage(%)
                                CCU2        39          100.0
-                            FD1P3XZ        98          100.0
+                            FD1P3XZ       102          100.0
                               HSOSC         1          100.0
                                  IB         5          100.0
-                               LUT4        96          100.0
+                               LUT4        90          100.0
                                  OB        13          100.0
 SUB MODULES
                             counter         1
@@ -18,15 +18,15 @@ SUB MODULES
                          numberbank         1
                             scanner         1
                              sevseg         1
-                              TOTAL       259
+                              TOTAL       257
 ----------------------------------------------------------------------
 Report for cell counter_U0.v1
 Instance Path : counter2
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2        13           33.3
-                            FD1P3XZ        25           25.5
-                               LUT4         9            9.4
+                            FD1P3XZ        25           24.5
+                               LUT4         9           10.0
                               TOTAL        47
 ----------------------------------------------------------------------
 Report for cell counter_U1.v1
@@ -34,40 +34,40 @@ Instance Path : counter1
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2        13           33.3
-                            FD1P3XZ        25           25.5
-                               LUT4         9            9.4
-                              TOTAL        47
-----------------------------------------------------------------------
-Report for cell sevseg.v1
-Instance Path : sevseg_logic
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         7            7.3
-                              TOTAL         7
+                            FD1P3XZ        25           24.5
+                               LUT4        10           11.1
+                              TOTAL        48
 ----------------------------------------------------------------------
 Report for cell numberbank.v1
 Instance Path : bank
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3XZ         9            9.2
-                               LUT4        26           27.1
-                              TOTAL        35
+                            FD1P3XZ         9            8.8
+                               LUT4        28           31.1
+                              TOTAL        37
+----------------------------------------------------------------------
+Report for cell sevseg.v1
+Instance Path : sevseg_logic
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7            7.8
+                              TOTAL         7
 ----------------------------------------------------------------------
 Report for cell scanner.v1
 Instance Path : scanner1
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3XZ         9            9.2
-                               LUT4        26           27.1
-                              TOTAL        35
+                            FD1P3XZ        13           12.7
+                               LUT4        20           22.2
+                              TOTAL        33
 ----------------------------------------------------------------------
 Report for cell debounce.v1
 Instance Path : debouncer
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2        13           33.3
-                            FD1P3XZ        26           26.5
-                               LUT4        11           11.5
+                            FD1P3XZ        26           25.5
+                               LUT4        11           12.2
 SUB MODULES
                             counter         1
                               TOTAL        51
@@ -77,6 +77,6 @@ Instance Path : debouncer.debounce_counter
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2        13           33.3
-                            FD1P3XZ        25           25.5
-                               LUT4        11           11.5
+                            FD1P3XZ        25           24.5
+                               LUT4        11           12.2
                               TOTAL        49

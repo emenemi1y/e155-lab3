@@ -19,7 +19,7 @@ module testbench_scanner();
 	// matrix of key presses, keys[row][col]
 	logic [3:0][3:0] keys;
 	pullup(R[0]);
-	pullup(R[1]);
+	pullup(R[1]); 
 	pullup(R[2]);
 	pullup(R[3]);
 	
