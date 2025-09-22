@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Sep 21 16:49:54 2025
+Sun Sep 21 20:59:16 2025
 
 
 Command Line:  C:\lscc\radiant\2024.2\ispfpga\bin\nt64\synthesis.exe -f C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/impl_1/lab3_ek_impl_1_lattice.synproj -logfile lab3_ek_impl_1_lattice.srp -gui -msgset C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/promote.xml 
@@ -297,7 +297,7 @@ CCU2 => 39
 FD1P3XZ => 98
 HSOSC => 1
 IB => 5
-LUT4 => 117
+LUT4 => 96
 OB => 13
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
@@ -315,16 +315,16 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : counter1/n294, loads : 33
+  Net : n294, loads : 33
+  Net : debouncer/debounce_counter/n305, loads : 33
   Net : counter2/n297, loads : 32
-  Net : debouncer/debounce_counter/n305, loads : 31
-  Net : bank/n658, loads : 27
-  Net : bank/n659, loads : 27
-  Net : bank/new_number_2__N_71, loads : 25
-  Net : bank/n5, loads : 24
-  Net : bank/n7_adj_133, loads : 24
-  Net : bank/n599, loads : 24
-  Net : bank/n660, loads : 22
+  Net : n302, loads : 18
+  Net : debouncer/debounce_counter/n4, loads : 14
+  Net : counter2/n1055, loads : 14
+  Net : counter2/n101[23], loads : 14
+  Net : counter1/n101[23], loads : 14
+  Net : counter1/n1030, loads : 14
+  Net : debouncer/debounce_counter/n1005, loads : 14
 ################### End Clock Report ##################
 
 
@@ -342,7 +342,7 @@ Peak Memory Usage: 95 MB
 Total CPU Time: 5 secs 
 Total REAL Time: 12 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 217dae0db2b69f3a6da3528fc8790c4e4bb6b5a0
+Checksum -- synthesis -- netlist: 568d15b36da3df4176f2c54b326c9e99bf0bfa3
 
 
 

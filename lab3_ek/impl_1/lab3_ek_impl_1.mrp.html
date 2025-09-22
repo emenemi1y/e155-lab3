@@ -49,7 +49,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.2.0.3.0
-Mapped on: Sun Sep 21 16:50:15 2025
+Mapped on: Sun Sep 21 20:59:37 2025
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
@@ -63,10 +63,10 @@ Command line:   map -pdc
 
    Number of slice registers:  98 out of  5280 (2%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:           206 out of  5280 (4%)
-      Number of logic LUT4s:             118
+   Number of LUT4s:           186 out of  5280 (4%)
+      Number of logic LUT4s:              97
       Number of inserted feedthru LUT4s:   9
-      Number of replicated LUT4s:          1
+      Number of replicated LUT4s:          2
       Number of ripple logic:             39 (78 LUT4s)
    Number of IO sites used:   18 out of 39 (46%)
       Number of IO sites used for general PIO: 18
@@ -96,27 +96,27 @@ Command line:   map -pdc
      counter1.new_clk/Q)
    Number of Clock Enables:  2
       Net VCC_net: 1 loads, 0 SLICEs
-      Net bank.n302: 8 loads, 8 SLICEs
+      Net n302: 8 loads, 8 SLICEs
    Number of LSRs:  8
       Net n4: 15 loads, 15 SLICEs
       Net counter2.n297: 13 loads, 13 SLICEs
-      Net counter1.n294: 13 loads, 13 SLICEs
-      Net bank.n657: 1 loads, 1 SLICEs
-      Net bank.n658: 1 loads, 1 SLICEs
-      Net bank.n659: 1 loads, 1 SLICEs
-      Net bank.n660: 1 loads, 1 SLICEs
+      Net n294: 13 loads, 13 SLICEs
+      Net bank.n1403: 1 loads, 1 SLICEs
+      Net bank.n709: 1 loads, 1 SLICEs
+      Net bank.n707: 1 loads, 1 SLICEs
+      Net bank.n706: 1 loads, 1 SLICEs
       Net debouncer.debounce_counter.n305: 13 loads, 13 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net scanner1.n19: 18 loads
+      Net n19: 15 loads
       Net n4: 15 loads
-      Net counter1.n294: 13 loads
       Net counter2.n297: 13 loads
       Net debouncer.debounce_counter.n305: 13 loads
-      Net bank.n11_adj_134: 12 loads
-      Net bank.n302: 12 loads
+      Net n294: 13 loads
       Net debounce_done: 12 loads
-      Net n14_adj_144: 11 loads
-      Net bank.n11: 9 loads
+      Net n302: 11 loads
+      Net C_c_3_N_102[8]: 7 loads
+      Net reset_c: 7 loads
+      Net seg_power_c: 7 loads
 
    Number of warnings:  0
    Number of criticals: 0
@@ -196,8 +196,8 @@ Instance Name: hf_osc.osc_inst
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 69 MB
-Checksum -- map: 322f45db3861651325d1345fb91a7f46da80dcb
+   Peak Memory Usage: 68 MB
+Checksum -- map: 3fa2280e301d82a1bbfca33c76239436b7ea4369
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995
      AT&amp;T Corp.   All rights reserved.

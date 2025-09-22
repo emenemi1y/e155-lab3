@@ -24,13 +24,10 @@
 # Compile of testbench_sevseg.sv was successful.
 # Compile of testbench_numberbank.sv was successful.
 # 9 compiles, 0 failed with no errors.
-# Load canceled
 vsim -gui work.numberbank -voptargs=+acc
 # vsim -gui work.numberbank -voptargs="+acc" 
-# Start time: 17:08:29 on Sep 21,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Start time: 20:38:45 on Sep 21,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
 # Loading sv_std.std
 # Loading work.numberbank(fast)
 add wave -position insertpoint  \
@@ -46,5 +43,510 @@ sim:/numberbank/nextstate \
 sim:/numberbank/updated \
 sim:/numberbank/new_number
 run 1000
-# End time: 17:10:16 on Sep 21,2025, Elapsed time: 0:01:47
+vsim -gui -voptargs=+acc work.testbench_numberbank
+# End time: 20:40:48 on Sep 21,2025, Elapsed time: 0:02:03
+# Errors: 0, Warnings: 2
+# vsim -gui -voptargs="+acc" work.testbench_numberbank 
+# Start time: 20:40:48 on Sep 21,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench_numberbank(fast)
+# Loading work.numberbank(fast)
+add wave -position insertpoint  \
+sim:/testbench_numberbank/clk \
+sim:/testbench_numberbank/reset \
+sim:/testbench_numberbank/R_val \
+sim:/testbench_numberbank/C_val \
+sim:/testbench_numberbank/key_pressed \
+sim:/testbench_numberbank/s1 \
+sim:/testbench_numberbank/s2
+run 1000
+# ** Error: test 1 output s1 = xxxx, exp = 1000 (8), input = 1011, 1101
+#    Time: 52 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 30
+# ** Error: test 2 output s1 = xxxx, exp = 0110 (6), input = 1101, 1011
+#    Time: 92 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 34
+# ** Error: test 2 output s2 = xxxx, exp = 1000 (8)
+#    Time: 92 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 35
+# ** Error: test 3 output s1 = xxxx, exp = 0110 (6)
+#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 38
+# ** Error: test 3 output s2 = xxxx, exp = 1000 (8)
+#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 39
+# ** Error: test 4 output s1 = xxxx, exp = 1110 (14, E)
+#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 42
+# ** Error: test 4 output s2 = xxxx, exp = 0110 (6)
+#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 43
+# ** Error: test 5 output s1 = xxxx, exp = 1101 (14, E)
+#    Time: 282 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 46
+# ** Error: test 5 output s2 = xxxx, exp = 0110 (6)
+#    Time: 282 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 47
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench_numberbank(fast)
+# Loading work.numberbank(fast)
+run 1000
+# ** Error: test 1 output s1 = 0101, exp = 1000 (8), input = 1011, 1101
+#    Time: 52 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 30
+# ** Error: test 2 output s1 = 1001, exp = 0110 (6), input = 1101, 1011
+#    Time: 92 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 34
+# ** Error: test 2 output s2 = 0101, exp = 1000 (8)
+#    Time: 92 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 35
+# ** Error: test 3 output s1 = 1001, exp = 0110 (6)
+#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 38
+# ** Error: test 3 output s2 = 0101, exp = 1000 (8)
+#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 39
+# ** Error: test 4 output s1 = 0001, exp = 1110 (14, E)
+#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 42
+# ** Error: test 4 output s2 = 0001, exp = 0110 (6)
+#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 43
+# ** Error: test 5 output s1 = 0001, exp = 1101 (14, E)
+#    Time: 282 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 46
+# ** Error: test 5 output s2 = 0001, exp = 0110 (6)
+#    Time: 282 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 47
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench_numberbank(fast)
+# Loading work.numberbank(fast)
+run 1000
+# ** Error: test 1 output s1 = 0101, exp = 1000 (8), input = 1011, 1101
+#    Time: 52 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 30
+# ** Error: test 2 output s1 = 1001, exp = 0110 (6), input = 1101, 1011
+#    Time: 92 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 34
+# ** Error: test 2 output s2 = 0101, exp = 1000 (8)
+#    Time: 92 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 35
+# ** Error: test 3 output s1 = 1001, exp = 0110 (6)
+#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 38
+# ** Error: test 3 output s2 = 0101, exp = 1000 (8)
+#    Time: 222 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 39
+# ** Error: test 4 output s1 = 0001, exp = 1110 (14, E)
+#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 42
+# ** Error: test 4 output s2 = 0001, exp = 0110 (6)
+#    Time: 252 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 43
+# ** Error: test 5 output s1 = 0001, exp = 1101 (14, E)
+#    Time: 282 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 46
+# ** Error: test 5 output s2 = 0001, exp = 0110 (6)
+#    Time: 282 ns  Scope: testbench_numberbank File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_numberbank.sv Line: 47
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench_numberbank(fast)
+# Loading work.numberbank(fast)
+run 1000
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv failed with 2 errors.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 1 failed with 2 errors.
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui -voptargs=+acc work.testbench_scanner
+# End time: 21:35:53 on Sep 21,2025, Elapsed time: 0:55:05
+# Errors: 0, Warnings: 4
+# vsim -gui -voptargs="+acc" work.testbench_scanner 
+# Start time: 21:35:53 on Sep 21,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(61): (vopt-7063) Failed to find 'check_key' in hierarchical name 'check_key'.
+#         Region: testbench_scanner
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# End time: 21:35:54 on Sep 21,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui -voptargs=+acc work.testbench_scanner
+# vsim -gui -voptargs="+acc" work.testbench_scanner 
+# Start time: 21:36:19 on Sep 21,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(61): (vopt-7063) Failed to find 'check_key' in hierarchical name 'check_key'.
+#         Region: testbench_scanner
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# End time: 21:36:19 on Sep 21,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 3
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui -voptargs=+acc work.testbench_scanner
+# vsim -gui -voptargs="+acc" work.testbench_scanner 
+# Start time: 21:36:51 on Sep 21,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(20).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(20).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(20).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(20).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(21).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(21).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(21).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(21).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(22).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(22).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(22).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(22).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(23).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(23).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(23).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(23).
+# Optimization failed
+# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=29, Warnings=1.
+# Error loading design
+# End time: 21:36:52 on Sep 21,2025, Elapsed time: 0:00:01
+# Errors: 29, Warnings: 3
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui -voptargs=+acc work.testbench_scanner
+# vsim -gui -voptargs="+acc" work.testbench_scanner 
+# Start time: 21:39:22 on Sep 21,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(15): (vopt-2912) Port 'bounce_cycle_wait' not found in module 'scanner' (4th connection).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(15): (vopt-2912) Port 'key_pressed' not found in module 'scanner' (7th connection).
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=1.
+# Error loading design
+# End time: 21:39:23 on Sep 21,2025, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 3
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv failed with 1 errors.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 1 failed with 1 error.
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv failed with 3 errors.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 1 failed with 3 errors.
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui -voptargs=+acc work.testbench_scanner
+# vsim -gui -voptargs="+acc" work.testbench_scanner 
+# Start time: 21:41:14 on Sep 21,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(20).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(20).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(20).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(20).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(21).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(21).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(21).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(21).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(22).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(22).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(22).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(22).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(23).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(23).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(23).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'C[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(29): (vopt-7045) 'R[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(23).
+# Optimization failed
+# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=29, Warnings=1.
+# Error loading design
+# End time: 21:41:15 on Sep 21,2025, Elapsed time: 0:00:01
+# Errors: 29, Warnings: 5
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui -voptargs=+acc work.testbench_scanner
+# vsim -gui -voptargs="+acc" work.testbench_scanner 
+# Start time: 21:42:13 on Sep 21,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(15): (vopt-2912) Port 'bounce_cycle_wait' not found in module 'scanner' (4th connection).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(15): (vopt-2912) Port 'key_pressed' not found in module 'scanner' (7th connection).
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=1.
+# Error loading design
+# End time: 21:42:13 on Sep 21,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 3
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv failed with 6 errors.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 1 failed with 6 errors.
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui -voptargs=+acc work.testbench_scanner
+# vsim -gui -voptargs="+acc" work.testbench_scanner 
+# Start time: 21:51:42 on Sep 21,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(19).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(19).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(19).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(19).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'C[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(20).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'C[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(20).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'C[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(20).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'C[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(20).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'C[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(21).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'C[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(21).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'C[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(21).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'C[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(21).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'C[0]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(22).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'C[1]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(22).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'C[2]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(22).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'C[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28).
+# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(28): (vopt-7045) 'R[3]' is driven by more than one continuous assignment. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(22).
+# Optimization failed
+# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=29, Warnings=1.
+# Error loading design
+# End time: 21:51:43 on Sep 21,2025, Elapsed time: 0:00:01
+# Errors: 29, Warnings: 4
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui -voptargs=+acc work.testbench_scanner
+# vsim -gui -voptargs="+acc" work.testbench_scanner 
+# Start time: 21:55:24 on Sep 21,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "scanner(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench_scanner(fast)
+# Loading work.scanner(fast)
+# ** Error (suppressible): (vsim-3839) Variable '/testbench_scanner/key_press', driven via a port connection, is multiply driven. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(16).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_scanner File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv Line: 78
+# ** Error (suppressible): (vsim-3839) Variable '/testbench_scanner/key_press', driven via a port connection, is multiply driven. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(16).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_scanner File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv Line: 76
+# ** Error (suppressible): (vsim-3839) Variable '/testbench_scanner/key_press', driven via a port connection, is multiply driven. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(16).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_scanner File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv Line: 73
+# ** Error (suppressible): (vsim-3839) Variable '/testbench_scanner/key_press', driven via a port connection, is multiply driven. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(16).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_scanner File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv Line: 68
+# ** Error (suppressible): (vsim-3839) Variable '/testbench_scanner/key_press', driven via a port connection, is multiply driven. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(16).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_scanner File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv Line: 65
+# ** Error (suppressible): (vsim-3839) Variable '/testbench_scanner/key_press', driven via a port connection, is multiply driven. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(16).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_scanner File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv Line: 61
+# Error loading design
+# End time: 21:55:47 on Sep 21,2025, Elapsed time: 0:00:23
+# Errors: 6, Warnings: 3
+# Compile of counter.sv was successful.
+# Compile of lab3_ek.sv was successful.
+# Compile of numberbank.sv was successful.
+# Compile of scanner.sv was successful.
+# Compile of sevseg.sv was successful.
+# Compile of testbench_counter.sv was successful.
+# Compile of testbench_scanner.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of testbench_numberbank.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui -voptargs=+acc work.scanner
+# vsim -gui -voptargs="+acc" work.scanner 
+# Start time: 21:56:40 on Sep 21,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "scanner(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.scanner(fast)
+add wave -position insertpoint  \
+sim:/scanner/clk \
+sim:/scanner/reset \
+sim:/scanner/R \
+sim:/scanner/debounce_done \
+sim:/scanner/C \
+sim:/scanner/R_press \
+sim:/scanner/key_press \
+sim:/scanner/debounce \
+sim:/scanner/state \
+sim:/scanner/nextstate
+vsim -gui -voptargs=+acc work.testbench_scanner
+# End time: 21:57:29 on Sep 21,2025, Elapsed time: 0:00:49
 # Errors: 0, Warnings: 3
+# vsim -gui -voptargs="+acc" work.testbench_scanner 
+# Start time: 21:57:29 on Sep 21,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench_scanner(fast)
+# Loading work.scanner(fast)
+add wave -position insertpoint  \
+sim:/testbench_scanner/clk \
+sim:/testbench_scanner/reset \
+sim:/testbench_scanner/R \
+sim:/testbench_scanner/C \
+sim:/testbench_scanner/R_press \
+sim:/testbench_scanner/key_press \
+sim:/testbench_scanner/debounce_done \
+sim:/testbench_scanner/debounce \
+sim:/testbench_scanner/keys
+run 10000
+# ** Error: FAILED!: Key press 1 -- got R_press=0 expected R_press=8 at time 172.
+#    Time: 172 ns  Scope: testbench_scanner.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv Line: 49
+# ** Error: FAILED!: Key press 2 -- got R_press=0 expected R_press=2 at time 322.
+#    Time: 322 ns  Scope: testbench_scanner.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv Line: 49
+# ** Error: FAILED!: Key press 3 -- got R_press=0 expected R_press=c at time 472.
+#    Time: 472 ns  Scope: testbench_scanner.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv Line: 49
+# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(79)
+#    Time: 722 ns  Iteration: 0  Instance: /testbench_scanner
+# Break in Module testbench_scanner at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv line 79
+# Causality operation skipped due to absence of debug database file
+# End time: 21:59:51 on Sep 21,2025, Elapsed time: 0:02:22
+# Errors: 3, Warnings: 2

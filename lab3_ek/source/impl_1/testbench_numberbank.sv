@@ -27,24 +27,24 @@ module testbench_numberbank();
 		reset = 1; #10;
 		key_pressed = 1'b0; #10
 		R_val = 4'b1011; C_val = 4'b1101; key_pressed = 1'b1; #10
-		assert(s1 == 4'b1000) else $error("test 1 output s1 = %b, exp = 1000 (8), input = %b, %b", s1, R_val, C_val); #10
+		assert(s1 == 4'b0101) else $error("test 1 output s1 = %b, exp = 0101 (8), input = %b, %b", s1, R_val, C_val); #10
 		
 		key_pressed = 1'b0; #10
 		R_val = 4'b1101; C_val = 4'b1011; key_pressed = 1'b1; #20 
-		assert(s1 == 4'b0110) else $error("test 2 output s1 = %b, exp = 0110 (6), input = %b, %b", s1, R_val, C_val);
-		assert(s2 == 4'b1000) else $error("test 2 output s2 = %b, exp = 1000 (8)", s2); #10
+		assert(s1 == 4'b1001) else $error("test 2 output s1 = %b, exp = 1001 (6), input = %b, %b", s1, R_val, C_val);
+		assert(s2 == 4'b0101) else $error("test 2 output s2 = %b, exp = 0101 (8)", s2); #10
 			
 		key_pressed = 1'b0; R_val = 4'b1110; C_val = 4'b0111; #120
-		assert(s1 == 4'b0110) else $error("test 3 output s1 = %b, exp = 0110 (6)", s1);
-		assert(s2 == 4'b1000) else $error("test 3 output s2 = %b, exp = 1000 (8)", s2); #10
+		assert(s1 == 4'b1001) else $error("test 3 output s1 = %b, exp = 1001 (6)", s1);
+		assert(s2 == 4'b0101) else $error("test 3 output s2 = %b, exp = 0101 (8)", s2); #10
 			
 		R_val = 4'b0111; C_val = 4'b1110; key_pressed = 1'b1; #20
-		assert(s1 == 4'b1110) else $error("test 4 output s1 = %b, exp = 1110 (14, E)", s1);
-		assert(s2 == 4'b0110) else $error("test 4 output s2 = %b, exp = 0110 (6)", s1); #10
+		assert(s1 == 4'b0001) else $error("test 4 output s1 = %b, exp = 0001 (14, E)", s1);
+		assert(s2 == 4'b1001) else $error("test 4 output s2 = %b, exp = 1001 (6)", s1); #10
 			
 		key_pressed = 1'b0; R_val = 4'b1010; C_val = 4'b0111; #20
-		assert(s1 == 4'b1110) else $error("test 5 output s1 = %b, exp = 1101 (14, E)", s1);
-		assert(s2 == 4'b0110) else $error("test 5 output s2 = %b, exp = 0110 (6)", s1); #10;
+		assert(s1 == 4'b0001) else $error("test 5 output s1 = %b, exp = 0001 (14, E)", s1);
+		assert(s2 == 4'b1001) else $error("test 5 output s2 = %b, exp = 1001 (6)", s1); #10;
 		
 	end
 
