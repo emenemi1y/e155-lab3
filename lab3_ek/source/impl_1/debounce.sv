@@ -11,14 +11,54 @@ module debounce (input logic clk, reset,
 				 input logic debounce,
 				 output logic debounce_done);
 	
+
+	typedef enum logic [1:0] {S0, S1} statetype;
+	logic counter_reset;
+	statetype state, nextstate;
 	
-	counter debounce_counter(clk, reset, bounce_cycle_wait, debounce_wait);
+	counter db_counter(clk, counter_reset, bounce_cycle_wait, debounce_wait);
 	
+	always_ff @(posedge clk)
+		if(~reset) state <= S0;
+		else	   state <= nextstate;
 	
-	always_ff @(posedge clk) begin
-		if (debounce_wait == 1) debounce_done = 1;
-		else debounce_done = 0;
-	end
+	always_comb 
+		case(state)
+			S0: begin
+				if (debounce) begin
+					counter_reset = 1'b1;
+					nextstate = S1;
+				end
+				else begin 
+					nextstate = S0;
+					counter_reset = 1'b0;
+				end
+			end
+			S1: begin
+				if (~debounce_wait) begin
+					counter_reset = 1'b1;
+					nextstate = S1;
+				end
+				else begin
+					counter_reset = 1'b0;
+					nextstate = S0;
+				end
+				end
+			default: begin
+				nextstate = S0;
+				counter_reset = 1'b0;
+			end
+		endcase
+				
 		
+	always_comb begin
+		debounce_done = (state == S0);
+	end
+	/*
+	always_ff @(posedge clk) begin
+		if (debounce_wait == 1) debounce_done <= 1;
+		else debounce_done <= 0;
+	end
+	*/
 		
 endmodule

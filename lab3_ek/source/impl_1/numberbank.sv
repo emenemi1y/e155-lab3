@@ -70,27 +70,27 @@ module numberbank(
 	
 	always_ff @(posedge clk)
 		if (~reset) begin
-			updated = 1'b0;
-			s1 = s1;
-			s2 = s2;
+			updated <= 1'b0;
+			s1 <= s1;
+			s2 <= s2;
 		end
 		else begin
 			if (key_press) begin
 				if (~updated) begin
-					s2 = s1;
-					s1 = new_number;
-					updated = 1'b1;
+					s2 <= s1;
+					s1 <= new_number;
+					updated <= 1'b1;
 				end
 				else begin
-					s1 = s1;
-					s2 = s2;
-					updated = 1'b1;
+					s1 <= s1;
+					s2 <= s2;
+					updated <= 1'b1;
 				end
 			end
 			else begin
-				s1 = s1;
-				s2 = s2;
-				updated = 1'b0;
+				s1 <= s1;
+				s2 <= s2;
+				updated <= 1'b0;
 			end
 		end
 		

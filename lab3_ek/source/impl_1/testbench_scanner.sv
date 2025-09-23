@@ -13,7 +13,7 @@ module testbench_scanner();
 	logic key_press, debounce_done, debounce;
 	assign debounce_done = 1'b1; // don't test debouncing here
 	
-	scanner dut(.clk(clk), .reset(reset), .R(R), .debounce_done(debounce_done), .C(C), .R_press(R_press), .key_press(key_press), .debounce(debounce));
+	scanner dut(.clk(clk), .reset(reset), .R(R), .debounce_done(debounce_done), .C(C), .key_press(key_press), .debounce(debounce));
 	// scanner dut(clk, reset, R, bounce_cycle_wait, C, R_press, key_pressed);
 	
 	// matrix of key presses, keys[row][col]
@@ -43,17 +43,19 @@ module testbench_scanner();
 	// task to check expected values of R_press
 	task check_key(input [3:0] exp_R_press, string msg);
 		#100;
+		/*
 		assert (R_press == exp_R_press)
 			$display("Passed: %s -- got R_press=%h expected R_press=%h at time %0t.", msg, R_press, exp_R_press, $time);
 		else
 			$error("FAILED!: %s -- got R_press=%h expected R_press=%h at time %0t.", msg, R_press, exp_R_press, $time);
+			*/
 		#50; 
 	endtask
 
 		
 	initial begin
 		reset = 1'b0; 
-		keys = '{default:0};
+		// keys = '{default:0};
 		#22 
 		reset = 1'b1;
 		

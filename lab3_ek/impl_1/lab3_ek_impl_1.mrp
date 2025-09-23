@@ -8,7 +8,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.2.0.3.0
-Mapped on: Mon Sep 22 13:21:54 2025
+Mapped on: Mon Sep 22 22:37:26 2025
 
 Design Information
 ------------------
@@ -24,10 +24,10 @@ Design Summary
 
    Number of slice registers: 102 out of  5280 (2%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:           183 out of  5280 (3%)
-      Number of logic LUT4s:              91
-      Number of inserted feedthru LUT4s:  13
-      Number of replicated LUT4s:          1
+   Number of LUT4s:           186 out of  5280 (4%)
+      Number of logic LUT4s:              98
+      Number of inserted feedthru LUT4s:   8
+      Number of replicated LUT4s:          2
       Number of ripple logic:             39 (78 LUT4s)
    Number of IO sites used:   18 out of 39 (46%)
       Number of IO sites used for general PIO: 18
@@ -55,11 +55,11 @@ Design Summary
      hf_osc.osc_inst/CLKHF)
       Net scanner_clk: 13 loads, 13 rising, 0 falling (Driver: Pin
      counter1.new_clk/Q)
-   Number of Clock Enables:  3
+   Number of Clock Enables:  2
       Net VCC_net: 1 loads, 0 SLICEs
-      Net bank.n275: 8 loads, 8 SLICEs
-      Net scanner1.n122: 4 loads, 4 SLICEs
-   Number of LSRs:  8
+      Net n270: 8 loads, 8 SLICEs
+   Number of LSRs:  9
+      Net n4: 18 loads, 18 SLICEs
 
                                     Page 1
 
@@ -69,25 +69,25 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net n4: 15 loads, 15 SLICEs
-      Net counter2.n268: 13 loads, 13 SLICEs
-      Net counter1.n265: 13 loads, 13 SLICEs
-      Net bank.n669: 1 loads, 1 SLICEs
+      Net counter1.n261: 13 loads, 13 SLICEs
+      Net counter2.n264: 13 loads, 13 SLICEs
+      Net bank.n1538: 1 loads, 1 SLICEs
       Net bank.n666: 1 loads, 1 SLICEs
-      Net bank.n1843: 1 loads, 1 SLICEs
-      Net bank.n667: 1 loads, 1 SLICEs
-      Net debouncer.debounce_counter.n278: 13 loads, 13 SLICEs
+      Net bank.n663: 1 loads, 1 SLICEs
+      Net bank.n664: 1 loads, 1 SLICEs
+      Net n1036: 1 loads, 1 SLICEs
+      Net n274: 13 loads, 13 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net n4: 15 loads
-      Net counter1.n265: 13 loads
-      Net counter2.n268: 13 loads
-      Net debouncer.debounce_counter.n278: 13 loads
-      Net bank.n275: 12 loads
-      Net bank.n11: 8 loads
-      Net debounce_done: 8 loads
-      Net scanner1.n14: 8 loads
+      Net n4: 18 loads
+      Net counter1.n261: 13 loads
+      Net counter2.n264: 13 loads
+      Net n14_adj_134: 13 loads
+      Net n274: 13 loads
+      Net n270: 11 loads
+      Net C_c_3_N_95[8]: 10 loads
+      Net state[0]: 10 loads
+      Net bank.n1609: 8 loads
       Net reset_c: 7 loads
-      Net seg_power_c: 7 loads
 
 
 
@@ -188,7 +188,7 @@ Run Time and Memory Usage
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 69 MB
-Checksum -- map: 20340a4ebc819e848d2bd9a28e271ab92731152
+Checksum -- map: f19de462b7f7e31cee5aa86154c5ca1ae63ff22
 
 
 
