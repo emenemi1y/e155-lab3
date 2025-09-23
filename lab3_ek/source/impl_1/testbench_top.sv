@@ -13,7 +13,7 @@ module testbench_top();
 	logic [6:0] seg;
 	logic [1:0] seg_power;
 	
-	top dut(.clk(clk), .reset(reset), .R(R), .C(C), .seg(seg), .seg_power(seg_power));
+	top_test dut(.clk(clk), .reset(reset), .R(R), .C(C), .seg(seg), .seg_power(seg_power));
 	
 	// matrix of key presses, keys[row][col]
 	// logic [3:0][3:0] keys;

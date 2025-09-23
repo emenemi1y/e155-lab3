@@ -15,134 +15,6 @@
 # //
 # Loading project e155-lab3-test
 # Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# 9 compiles, 0 failed with no errors.
-vsim -gui work.testbench_scanner -voptargs=+acc
-# vsim -gui work.testbench_scanner -voptargs="+acc" 
-# Start time: 19:06:40 on Sep 22,2025
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vopt-143) Recognized 1 FSM in module "scanner(fast)".
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_scanner(fast)
-# Loading work.scanner(fast)
-run 10000
-# ** Error: FAILED!: Key press 1 -- got R_press=f expected R_press=8 at time 172.
-#    Time: 172 ns  Scope: testbench_scanner.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv Line: 49
-# ** Error: FAILED!: Key press 2 -- got R_press=f expected R_press=2 at time 322.
-#    Time: 322 ns  Scope: testbench_scanner.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv Line: 49
-# ** Error: FAILED!: Key press 3 -- got R_press=f expected R_press=c at time 472.
-#    Time: 472 ns  Scope: testbench_scanner.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv Line: 49
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(79)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_scanner
-# Break in Module testbench_scanner at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv line 79
-add wave -position insertpoint  \
-sim:/testbench_scanner/clk \
-sim:/testbench_scanner/reset \
-sim:/testbench_scanner/R \
-sim:/testbench_scanner/C \
-sim:/testbench_scanner/R_press \
-sim:/testbench_scanner/key_press \
-sim:/testbench_scanner/debounce_done \
-sim:/testbench_scanner/debounce \
-sim:/testbench_scanner/keys
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.testbench_scanner(fast)
-# Loading work.scanner(fast)
-run 10000
-# ** Error: FAILED!: Key press 1 -- got R_press=f expected R_press=8 at time 172.
-#    Time: 172 ns  Scope: testbench_scanner.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv Line: 49
-# ** Error: FAILED!: Key press 2 -- got R_press=f expected R_press=2 at time 322.
-#    Time: 322 ns  Scope: testbench_scanner.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv Line: 49
-# ** Error: FAILED!: Key press 3 -- got R_press=f expected R_press=c at time 472.
-#    Time: 472 ns  Scope: testbench_scanner.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv Line: 49
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(79)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_scanner
-# Break in Module testbench_scanner at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv line 79
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# 9 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vopt-143) Recognized 1 FSM in module "scanner(fast)".
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_scanner(fast)
-# Loading work.scanner(fast)
-run 10000
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(81)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_scanner
-# Break in Module testbench_scanner at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv line 81
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# 9 compiles, 0 failed with no errors.
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# Compile of testbench_top.sv failed with 2 errors.
-# 10 compiles, 1 failed with 2 errors.
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# Compile of testbench_top.sv was successful.
-# 10 compiles, 0 failed with no errors.
-vsim -gui -voptargs=+acc work.testbench_top
-# End time: 19:26:31 on Sep 22,2025, Elapsed time: 0:19:51
-# Errors: 0, Warnings: 6
-# vsim -gui -voptargs="+acc" work.testbench_top 
-# Start time: 19:26:31 on Sep 22,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Error: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(19): Module 'HSOSC' is not defined.
-#  For instance 'hf_osc' at path 'testbench_top.dut'
-# ** Error: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(46): Module 'debounce' is not defined.
-#  For instance 'debouncer' at path 'testbench_top.dut'
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=1.
-# Error loading design
-# End time: 19:26:31 on Sep 22,2025, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 2
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
 # Compile of numberbank.sv was successful.
 # Compile of scanner.sv was successful.
 # Compile of sevseg.sv was successful.
@@ -152,218 +24,9 @@ vsim -gui -voptargs=+acc work.testbench_top
 # Compile of testbench_numberbank.sv was successful.
 # Compile of testbench_top.sv was successful.
 # Compile of debounce.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui -voptargs=+acc work.testbench_top
-# vsim -gui -voptargs="+acc" work.testbench_top 
-# Start time: 19:29:46 on Sep 22,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vopt-143) Recognized 1 FSM in module "scanner(fast)".
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-add wave -position insertpoint  \
-sim:/testbench_top/clk \
-sim:/testbench_top/reset \
-sim:/testbench_top/R \
-sim:/testbench_top/C \
-sim:/testbench_top/seg \
-sim:/testbench_top/seg_power \
-sim:/testbench_top/keys
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=40 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 48
-# ** Error: Failed: Key press 2 -- got seg=40 expected seg=4 at time 322.
-#    Time: 322 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 48
-# ** Error: Failed: Key press 3 -- got seg=40 expected seg=6 at time 472.
-#    Time: 472 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 48
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(78)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 78
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# Compile of testbench_top.sv was successful.
-# Compile of debounce.sv was successful.
-# 11 compiles, 0 failed with no errors.
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=40 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 48
-# ** Error: Failed: Key press 2 -- got seg=40 expected seg=4 at time 322.
-#    Time: 322 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 48
-# ** Error: Failed: Key press 3 -- got seg=40 expected seg=6 at time 472.
-#    Time: 472 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 48
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(78)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 78
-vsim -gui -voptargs=+acc work.testbench_scanner
-# End time: 19:47:15 on Sep 22,2025, Elapsed time: 0:17:29
-# Errors: 3, Warnings: 3
-# vsim -gui -voptargs="+acc" work.testbench_scanner 
-# Start time: 19:47:16 on Sep 22,2025
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading sv_std.std
-# Loading work.testbench_scanner(fast)
-# Loading work.scanner(fast)
-add wave -position insertpoint  \
-sim:/testbench_scanner/clk \
-sim:/testbench_scanner/reset \
-sim:/testbench_scanner/R \
-sim:/testbench_scanner/C \
-sim:/testbench_scanner/R_press \
-sim:/testbench_scanner/key_press \
-sim:/testbench_scanner/debounce_done \
-sim:/testbench_scanner/debounce \
-sim:/testbench_scanner/keys
-run 10000
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(81)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_scanner
-# Break in Module testbench_scanner at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv line 81
-restart -f
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.testbench_scanner(fast)
-# Loading work.scanner(fast)
-run 10000
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(81)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_scanner
-# Break in Module testbench_scanner at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv line 81
-vsim -gui -voptargs=+acc work.testbench_numberbank
-# End time: 19:52:49 on Sep 22,2025, Elapsed time: 0:05:33
-# Errors: 0, Warnings: 1
-# vsim -gui -voptargs="+acc" work.testbench_numberbank 
-# Start time: 19:52:49 on Sep 22,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_numberbank(fast)
-# Loading work.numberbank(fast)
-add wave -position insertpoint  \
-sim:/testbench_numberbank/clk \
-sim:/testbench_numberbank/reset \
-sim:/testbench_numberbank/R_val \
-sim:/testbench_numberbank/C_val \
-sim:/testbench_numberbank/key_pressed \
-sim:/testbench_numberbank/s1 \
-sim:/testbench_numberbank/s2
-run 10000
-vsim -gui -voptargs=+acc work.testbench_top
-# End time: 19:56:15 on Sep 22,2025, Elapsed time: 0:03:26
-# Errors: 0, Warnings: 2
-# vsim -gui -voptargs="+acc" work.testbench_top 
-# Start time: 19:56:15 on Sep 22,2025
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-add wave -position insertpoint  \
-sim:/testbench_top/clk \
-sim:/testbench_top/reset \
-sim:/testbench_top/R \
-sim:/testbench_top/C \
-sim:/testbench_top/seg \
-sim:/testbench_top/seg_power \
-sim:/testbench_top/keys
-add wave -position insertpoint  \
-sim:/testbench_top/dut/sync_R
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=40 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 48
-# ** Error: Failed: Key press 2 -- got seg=40 expected seg=4 at time 322.
-#    Time: 322 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 48
-# ** Error: Failed: Key press 3 -- got seg=40 expected seg=6 at time 472.
-#    Time: 472 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 48
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(78)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 78
-add wave -position insertpoint  \
-sim:/testbench_top/dut/scanner1/key_press
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=40 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 48
-# ** Error: Failed: Key press 2 -- got seg=40 expected seg=4 at time 322.
-#    Time: 322 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 48
-# ** Error: Failed: Key press 3 -- got seg=40 expected seg=6 at time 472.
-#    Time: 472 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 48
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(78)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 78
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=40 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 48
-# ** Error: Failed: Key press 2 -- got seg=40 expected seg=4 at time 322.
-#    Time: 322 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 48
-# ** Error: Failed: Key press 3 -- got seg=40 expected seg=6 at time 472.
-#    Time: 472 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 48
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(78)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 78
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# Compile of testbench_top.sv failed with 1 errors.
-# Compile of debounce.sv was successful.
+# Compile of lab3_ek_test.sv failed with 1 errors.
 # 11 compiles, 1 failed with 1 error.
 # Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
 # Compile of numberbank.sv was successful.
 # Compile of scanner.sv was successful.
 # Compile of sevseg.sv was successful.
@@ -371,11 +34,11 @@ run 10000
 # Compile of testbench_scanner.sv was successful.
 # Compile of testbench_sevseg.sv was successful.
 # Compile of testbench_numberbank.sv was successful.
-# Compile of testbench_top.sv failed with 1 errors.
+# Compile of testbench_top.sv was successful.
 # Compile of debounce.sv was successful.
+# Compile of lab3_ek_test.sv failed with 1 errors.
 # 11 compiles, 1 failed with 1 error.
 # Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
 # Compile of numberbank.sv was successful.
 # Compile of scanner.sv was successful.
 # Compile of sevseg.sv was successful.
@@ -385,107 +48,18 @@ run 10000
 # Compile of testbench_numberbank.sv was successful.
 # Compile of testbench_top.sv was successful.
 # Compile of debounce.sv was successful.
+# Compile of lab3_ek_test.sv was successful.
 # 11 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+vsim -gui work.testbench_top -voptargs=+acc
+# vsim -gui work.testbench_top -voptargs="+acc" 
+# Start time: 12:58:18 on Sep 23,2025
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(60): (vopt-12003) Variable 'R' written by continuous and procedural assignments. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(20). 
-# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(63): (vopt-12003) Variable 'R' written by continuous and procedural assignments. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(20). 
-# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(66): (vopt-12003) Variable 'R' written by continuous and procedural assignments. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(20). 
-# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(69): (vopt-12003) Variable 'R' written by continuous and procedural assignments. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(20). 
-# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(73): (vopt-12003) Variable 'R' written by continuous and procedural assignments. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(20). 
-# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(76): (vopt-12003) Variable 'R' written by continuous and procedural assignments. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(20). 
-# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(79): (vopt-12003) Variable 'R' written by continuous and procedural assignments. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(20). 
-# Optimization failed
-# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=8, Warnings=1.
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# Compile of testbench_top.sv failed with 7 errors.
-# Compile of debounce.sv was successful.
-# 11 compiles, 1 failed with 7 errors.
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# Compile of testbench_top.sv was successful.
-# Compile of debounce.sv was successful.
-# 11 compiles, 0 failed with no errors.
-restart -f
-# No Design Loaded!
-vsim -gui -voptargs=+acc work.testbench_top
-# vsim -gui -voptargs="+acc" work.testbench_top 
-# Start time: 19:56:15 on Sep 22,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
 # ** Note: (vopt-143) Recognized 1 FSM in module "scanner(fast)".
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=8, Warnings=2.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
 # Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-# Warning in wave window restart: ** UI-Msg (Warning): (vish-4014) No objects found matching '/testbench_top/keys'. 
-add wave -position insertpoint  \
-sim:/testbench_top/clk \
-sim:/testbench_top/reset \
-sim:/testbench_top/R \
-sim:/testbench_top/C \
-sim:/testbench_top/seg \
-sim:/testbench_top/seg_power
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=40 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 2 -- got seg=40 expected seg=4 at time 322.
-#    Time: 322 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 3 -- got seg=40 expected seg=6 at time 472.
-#    Time: 472 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(83)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 83
-vsim -gui -voptargs=+acc work.testbench_numberbank
-# End time: 20:09:13 on Sep 22,2025, Elapsed time: 0:12:58
-# Errors: 11, Warnings: 5
-# vsim -gui -voptargs="+acc" work.testbench_numberbank 
-# Start time: 20:09:13 on Sep 22,2025
-# ** Note: (vsim-8009) Loading existing optimized design _opt2
-# Loading sv_std.std
-# Loading work.testbench_numberbank(fast)
-# Loading work.numberbank(fast)
-add wave -position insertpoint  \
-sim:/testbench_numberbank/clk \
-sim:/testbench_numberbank/reset \
-sim:/testbench_numberbank/R_val \
-sim:/testbench_numberbank/C_val \
-sim:/testbench_numberbank/key_pressed \
-sim:/testbench_numberbank/s1 \
-sim:/testbench_numberbank/s2
-run 1000
-vsim -gui -voptargs=+acc work.testbench_top
-# End time: 20:10:21 on Sep 22,2025, Elapsed time: 0:01:08
-# Errors: 0, Warnings: 1
-# vsim -gui -voptargs="+acc" work.testbench_top 
-# Start time: 20:10:21 on Sep 22,2025
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
-# Loading sv_std.std
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
+# Loading work.top_test(fast)
 # Loading work.sevseg(fast)
 # Loading work.counter(fast)
 # Loading work.debounce(fast)
@@ -498,368 +72,20 @@ sim:/testbench_top/R \
 sim:/testbench_top/C \
 sim:/testbench_top/seg \
 sim:/testbench_top/seg_power
-add wave -position insertpoint  \
-sim:/testbench_top/dut/bank/s1
-add wave -position insertpoint  \
-sim:/testbench_top/dut/bank/s2
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=40 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 2 -- got seg=40 expected seg=4 at time 322.
-#    Time: 322 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 3 -- got seg=40 expected seg=6 at time 472.
-#    Time: 472 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(83)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 83
-add wave -position insertpoint  \
-sim:/testbench_top/dut/s
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=40 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 2 -- got seg=40 expected seg=4 at time 322.
-#    Time: 322 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 3 -- got seg=40 expected seg=6 at time 472.
-#    Time: 472 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(83)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 83
-add wave -position insertpoint  \
-sim:/testbench_top/dut/scanner1/key_press
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=40 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 2 -- got seg=40 expected seg=4 at time 322.
-#    Time: 322 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 3 -- got seg=40 expected seg=6 at time 472.
-#    Time: 472 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(83)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 83
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=40 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 2 -- got seg=40 expected seg=4 at time 322.
-#    Time: 322 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 3 -- got seg=40 expected seg=6 at time 472.
-#    Time: 472 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(83)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 83
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=40 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 2 -- got seg=40 expected seg=4 at time 322.
-#    Time: 322 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 3 -- got seg=40 expected seg=6 at time 472.
-#    Time: 472 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(83)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 83
-run 10000
-# ** Error: Simulation didn't complete in time
-#    Time: 5 us  Scope: testbench_top File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 89
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(90)
-#    Time: 5 us  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 90
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# Compile of testbench_top.sv was successful.
-# Compile of debounce.sv was successful.
-# 11 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vopt-143) Recognized 1 FSM in module "scanner(fast)".
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=19 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 2 -- got seg=40 expected seg=4 at time 322.
-#    Time: 322 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 3 -- got seg=19 expected seg=6 at time 472.
-#    Time: 472 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(83)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 83
-run 10000
-# ** Error: Simulation didn't complete in time
-#    Time: 5 us  Scope: testbench_top File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 89
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(90)
-#    Time: 5 us  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 90
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# Compile of testbench_top.sv failed with 1 errors.
-# Compile of debounce.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# Compile of testbench_top.sv was successful.
-# Compile of debounce.sv was successful.
-# 11 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Error: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/lab3_ek.sv(21): Module 'HSOSC' is not defined.
-#  For instance 'hf_osc' at path 'testbench_top.dut'
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# Compile of testbench_top.sv was successful.
-# Compile of debounce.sv was successful.
-# 11 compiles, 0 failed with no errors.
-restart -f 
-# No Design Loaded!
-vsim -gui -voptargs=+acc work.testbench_top
-# vsim -gui -voptargs="+acc" work.testbench_top 
-# Start time: 20:10:21 on Sep 22,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vopt-143) Recognized 1 FSM in module "scanner(fast)".
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=2.
-# Loading sv_std.std
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=19 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 2 -- got seg=19 expected seg=4 at time 372.
-#    Time: 372 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 3 -- got seg=19 expected seg=6 at time 572.
-#    Time: 572 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(83)
-#    Time: 822 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 83
-add wave -position insertpoint  \
-sim:/testbench_top/dut/scanner1/debounce_done
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=19 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 2 -- got seg=19 expected seg=4 at time 372.
-#    Time: 372 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 3 -- got seg=19 expected seg=6 at time 572.
-#    Time: 572 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(83)
-#    Time: 822 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 83
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# Compile of testbench_top.sv was successful.
-# Compile of debounce.sv was successful.
-# 11 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vopt-143) Recognized 1 FSM in module "debounce(fast)".
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=19 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 2 -- got seg=40 expected seg=4 at time 322.
-#    Time: 322 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 3 -- got seg=19 expected seg=6 at time 472.
-#    Time: 472 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(83)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 83
-run 10000
-# ** Error: Simulation didn't complete in time
-#    Time: 5 us  Scope: testbench_top File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 89
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(90)
-#    Time: 5 us  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 90
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=19 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 2 -- got seg=40 expected seg=4 at time 322.
-#    Time: 322 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 3 -- got seg=19 expected seg=6 at time 472.
-#    Time: 472 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(83)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 83
 add wave -position insertpoint  \
 sim:/testbench_top/dut/debounce
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt1
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
-run 10000
-# ** Error: Failed: Key press 1 -- got seg=19 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 2 -- got seg=40 expected seg=4 at time 322.
-#    Time: 322 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 3 -- got seg=19 expected seg=6 at time 472.
-#    Time: 472 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(83)
-#    Time: 722 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 83
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# Compile of testbench_top.sv was successful.
-# Compile of debounce.sv was successful.
-# 11 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
-# Loading work.scanner(fast)
-# Loading work.numberbank(fast)
+add wave -position insertpoint  \
+sim:/testbench_top/dut/key_press
+add wave -position insertpoint  \
+sim:/testbench_top/dut/sync_R
+add wave -position insertpoint  \
+sim:/testbench_top/dut/debounce_done
+add wave -position insertpoint  \
+sim:/testbench_top/dut/bank/state
+add wave -position insertpoint  \
+sim:/testbench_top/dut/scanner1/state
+add wave -position insertpoint  \
+sim:/testbench_top/dut/debouncer/state
 run 10000
 # ** Error: Failed: Key press 1 -- got seg=19 expected seg=0 at time 172.
 #    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
@@ -870,65 +96,117 @@ run 10000
 # ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(83)
 #    Time: 822 ns  Iteration: 0  Instance: /testbench_top
 # Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 83
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# Compile of testbench_top.sv was successful.
-# Compile of debounce.sv was successful.
-# 11 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Error (suppressible): C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/scanner.sv(149): (vopt-7033) Variable 'debounce' driven in a combinational block, may not be driven by any other process. See C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/scanner.sv(130).
-# Optimization failed
-# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=1.
-# Compile of counter.sv was successful.
-# Compile of lab3_ek.sv was successful.
-# Compile of numberbank.sv was successful.
-# Compile of scanner.sv was successful.
-# Compile of sevseg.sv was successful.
-# Compile of testbench_counter.sv was successful.
-# Compile of testbench_scanner.sv was successful.
-# Compile of testbench_sevseg.sv was successful.
-# Compile of testbench_numberbank.sv was successful.
-# Compile of testbench_top.sv was successful.
-# Compile of debounce.sv was successful.
-# 11 compiles, 0 failed with no errors.
-restart -f
-# No Design Loaded!
-vsim -gui -voptargs=+acc work.testbench_top
-# vsim -gui -voptargs="+acc" work.testbench_top 
-# Start time: 20:10:21 on Sep 22,2025
+run 10000
+# ** Error: Simulation didn't complete in time
+#    Time: 5 us  Scope: testbench_top File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 89
+# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(90)
+#    Time: 5 us  Iteration: 0  Instance: /testbench_top
+# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 90
+# Causality operation skipped due to absence of debug database file
+# image file format "bmp" is unknown
+# image file format "bmp" is unknown
+vsim -gui -voptargs=+acc work.scanner
+# End time: 13:05:19 on Sep 23,2025, Elapsed time: 0:07:01
+# Errors: 4, Warnings: 7
+# vsim -gui -voptargs="+acc" work.scanner 
+# Start time: 13:05:19 on Sep 23,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
 # ** Note: (vopt-143) Recognized 1 FSM in module "scanner(fast)".
-# ** Note: (vopt-143) Recognized 1 FSM in module "debounce(fast)".
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=2.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
-# Loading work.testbench_top(fast)
-# Loading work.top(fast)
-# Loading work.sevseg(fast)
-# Loading work.counter(fast)
-# Loading work.debounce(fast)
 # Loading work.scanner(fast)
+add wave -position insertpoint  \
+sim:/scanner/clk \
+sim:/scanner/reset \
+sim:/scanner/R \
+sim:/scanner/debounce_done \
+sim:/scanner/C \
+sim:/scanner/key_press \
+sim:/scanner/debounce \
+sim:/scanner/state \
+sim:/scanner/nextstate \
+sim:/scanner/update
+run 10000
+vsim -gui -voptargs=+acc work.testbench_scanner
+# End time: 13:06:11 on Sep 23,2025, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 2
+# vsim -gui -voptargs="+acc" work.testbench_scanner 
+# Start time: 13:06:11 on Sep 23,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "scanner(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench_scanner(fast)
+# Loading work.scanner(fast)
+add wave -position insertpoint  \
+sim:/testbench_scanner/clk \
+sim:/testbench_scanner/reset \
+sim:/testbench_scanner/R \
+sim:/testbench_scanner/C \
+sim:/testbench_scanner/R_press \
+sim:/testbench_scanner/key_press \
+sim:/testbench_scanner/debounce_done \
+sim:/testbench_scanner/debounce \
+sim:/testbench_scanner/keys
+run 10000
+# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(81)
+#    Time: 722 ns  Iteration: 0  Instance: /testbench_scanner
+# Break in Module testbench_scanner at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv line 81
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.testbench_scanner(fast)
+# Loading work.scanner(fast)
+run 1000
+# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(81)
+#    Time: 722 ns  Iteration: 0  Instance: /testbench_scanner
+# Break in Module testbench_scanner at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv line 81
+vsim -gui -voptargs=+acc work.testbench_numberbank
+# End time: 13:08:34 on Sep 23,2025, Elapsed time: 0:02:23
+# Errors: 0, Warnings: 2
+# vsim -gui -voptargs="+acc" work.testbench_numberbank 
+# Start time: 13:08:34 on Sep 23,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench_numberbank(fast)
 # Loading work.numberbank(fast)
-run 20000
-# ** Error: Failed: Key press 1 -- got seg=19 expected seg=0 at time 172.
-#    Time: 172 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 2 -- got seg=24 expected seg=4 at time 372.
-#    Time: 372 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Error: Failed: Key press 3 -- got seg=24 expected seg=6 at time 572.
-#    Time: 572 ns  Scope: testbench_top.check_key File: C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv Line: 52
-# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv(83)
-#    Time: 822 ns  Iteration: 0  Instance: /testbench_top
-# Break in Module testbench_top at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_top.sv line 83
-# End time: 22:53:35 on Sep 22,2025, Elapsed time: 2:43:14
-# Errors: 5, Warnings: 4
+add wave -position insertpoint  \
+sim:/testbench_numberbank/clk \
+sim:/testbench_numberbank/reset \
+sim:/testbench_numberbank/R_val \
+sim:/testbench_numberbank/C_val \
+sim:/testbench_numberbank/key_pressed \
+sim:/testbench_numberbank/s1 \
+sim:/testbench_numberbank/s2
+run 10000
+vsim -gui -voptargs=+acc work.testbench_scanner
+# End time: 13:09:41 on Sep 23,2025, Elapsed time: 0:01:07
+# Errors: 0, Warnings: 2
+# vsim -gui -voptargs="+acc" work.testbench_scanner 
+# Start time: 13:09:41 on Sep 23,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.testbench_scanner(fast)
+# Loading work.scanner(fast)
+add wave -position insertpoint  \
+sim:/testbench_scanner/reset \
+sim:/testbench_scanner/R_press \
+sim:/testbench_scanner/R \
+sim:/testbench_scanner/keys \
+sim:/testbench_scanner/key_press \
+sim:/testbench_scanner/debounce_done \
+sim:/testbench_scanner/debounce \
+sim:/testbench_scanner/clk \
+sim:/testbench_scanner/C
+run 10000
+# ** Note: $stop    : C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv(81)
+#    Time: 722 ns  Iteration: 0  Instance: /testbench_scanner
+# Break in Module testbench_scanner at C:/Users/ekendrick/Documents/GitHub/e155-lab3/lab3_ek/source/impl_1/testbench_scanner.sv line 81
+run 1000
+# End time: 13:10:29 on Sep 23,2025, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 1
